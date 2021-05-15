@@ -26,14 +26,26 @@ void	push(t_list **stac_a, t_list **stac_b)
 	t_list	*tmp;
 
 	tmp = *stac_a;
-	tmp_next = (*stac_a)->next;
-	tmp_prev = (*stac_a)->prev;
-	tmp->next = tmp;
-	tmp->prev = tmp;
-	ft_lstadd_front(stac_b, *stac_a);
-	tmp_next->prev = tmp_prev;
-	tmp_prev->next = tmp_next;
-	*stac_a = tmp_next;
+	if ((*stac_a)->next != tmp)
+	{
+		tmp_next = (*stac_a)->next;
+		tmp_prev = (*stac_a)->prev;
+		tmp->next = tmp;
+		tmp->prev = tmp;
+		ft_lstadd_front(stac_b, *stac_a);
+		tmp_next->prev = tmp_prev;
+		tmp_prev->next = tmp_next;
+		*stac_a = tmp_next;
+	}
+	else
+	{
+		(*stac_a)->next = (*stac_b);
+		(*stac_a)->prev = ft_lstlast(*stac_b);
+		ft_lstlast(*stac_b)->next = (*stac_a);
+		(*stac_b)->prev = (*stac_a);
+		(*stac_b) = tmp;
+		(*stac_a) = NULL;
+	}
 }
 
 void	rotate(t_list **stac)

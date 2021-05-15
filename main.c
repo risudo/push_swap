@@ -115,20 +115,21 @@ void	put_stac(t_list *stac_a, t_list *stac_b)
 	}
 	printf("i: %d\tvalue: %ld\n", i, stac_a->value);
 	printf("\n");
-	while (stac_a != p_a)
-	{
-		printf("i: %d\tvalue: %ld\n", i, stac_a->value);
-		stac_a = stac_a->prev;
-		i--;
-	}
-	printf("i: %d\tvalue: %ld\n", i, stac_a->value);
-	printf("\n");
+	// while (stac_a != p_a)
+	// {
+	// 	printf("i: %d\tvalue: %ld\n", i, stac_a->value);
+	// 	stac_a = stac_a->prev;
+	// 	i--;
+	// }
+	// printf("i: %d\tvalue: %ld\n", i, stac_a->value);
+	// printf("\n");
+	i = 1;
 
 STAC_B:
 	printf("---b---\n");
 	if (!stac_b)
 	{
-		printf("(null)\n");
+		printf("(null)\n\n\n\n");
 		return ;
 	}
 	while (stac_b ->next != p_b)
@@ -138,15 +139,15 @@ STAC_B:
 		i++;
 	}
 	printf("i: %d\tvalue: %ld\n", i, stac_b->value);
-	printf("\n");
-	while (stac_b != p_b)
-	{
-		printf("i: %d\tvalue: %ld\n", i, stac_b->value);
-		stac_b = stac_b->prev;
-		i--;
-	}
-	printf("i: %d\tvalue: %ld\n", i, stac_b->value);
-	printf("\n");
+	printf("\n\n\n");
+	// while (stac_b != p_b)
+	// {
+	// 	printf("i: %d\tvalue: %ld\n", i, stac_b->value);
+	// 	stac_b = stac_b->prev;
+	// 	i--;
+	// }
+	// printf("i: %d\tvalue: %ld\n", i, stac_b->value);
+	// printf("\n");
 }
 /*
 ?:	被りチェックはソートしてからの方がいいかな
