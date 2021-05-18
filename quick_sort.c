@@ -26,9 +26,15 @@ void	quick_sort_pa(t_list **stack_a, t_list **stack_b, t_deta *deta_b)
 {
 	t_list	*p;
 	int		i;
+	int		j;
 
+	j = 0;
 	i = 0;
 	p = (*stack_b);
+	//while (j < len)
+	//{
+	//	
+	//}
 	while ((*stack_b)->next != p)
 	{
 		if ((*stack_b)->value <= deta_b->average)
@@ -96,4 +102,10 @@ void	quick_sort(t_list **stack_a, t_list **stack_b, t_deta *deta_a)
 /*
 ?	リストをwhileで回す時、長さを決めてその長さ分回すようにする
 ?	is_sortedで末尾にソート済みが何個あるか数える
+?	whileを回すときはlen - sorted_lenの数だけ回すようにする
+?
+?	1	PAした時にそれが６個以内だった場合ソートして末尾に移動
+?	2	6個より多かった場合、大小で分割してPB
+*	Aの末尾は必ずソート済みのものを置くようにする
+	
 */
