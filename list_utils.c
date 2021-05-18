@@ -1,67 +1,96 @@
 #include "push_swap.h"
 //*:	先頭の2つを入れ替える
-void	swap(t_list **stac)
+void	swap(t_list **stack)
 {
-	t_list	*stac_cpy;
+	t_list	*stack_cpy;
 	t_list	*next_cpy;
 	t_list	*last;
 
-	last = ft_lstlast(*stac);
-	stac_cpy = *stac;
-	next_cpy = (*stac)->next;
-	stac_cpy->next = next_cpy->next;
-	next_cpy->next->prev = stac_cpy;
-	next_cpy->next = stac_cpy;
-	stac_cpy->prev = next_cpy;
+	last = ft_lstlast(*stack);
+	stack_cpy = *stack;
+	next_cpy = (*stack)->next;
+	if (!(last == next_cpy))
+	{
+	stack_cpy->next = next_cpy->next;
+	next_cpy->next->prev = stack_cpy;
+	next_cpy->next = stack_cpy;
+	stack_cpy->prev = next_cpy;
 	last->next = next_cpy;
 	next_cpy->prev = last;
-	*stac = next_cpy;
+	}
+	*stack = next_cpy;
 }
 //*:	第一引数の先頭を第二引数の先頭に移動する
-//*:	stac_aを全部stac_bに写そうとするとバグる
-void	push(t_list **stac_a, t_list **stac_b)
+//*:	stack_aを全部stack_bに写そうとするとバグる
+void	push(t_list **stack_a, t_list **stack_b)
 {
 	t_list	*tmp_next;
 	t_list	*tmp_prev;
 	t_list	*tmp;
 
-	tmp = *stac_a;
-	if ((*stac_a)->next != tmp)
+	tmp = *stack_a;
+	if ((*stack_a)->next != tmp)
 	{
-		tmp_next = (*stac_a)->next;
-		tmp_prev = (*stac_a)->prev;
+		tmp_next = (*stack_a)->next;
+		tmp_prev = (*stack_a)->prev;
 		tmp->next = tmp;
 		tmp->prev = tmp;
-		ft_lstadd_front(stac_b, *stac_a);
+		ft_lstadd_front(stack_b, *stack_a);
 		tmp_next->prev = tmp_prev;
 		tmp_prev->next = tmp_next;
-		*stac_a = tmp_next;
+		*stack_a = tmp_next;
 	}
 	else
 	{
-		(*stac_a)->next = (*stac_b);
-		(*stac_a)->prev = ft_lstlast(*stac_b);
-		ft_lstlast(*stac_b)->next = (*stac_a);
-		(*stac_b)->prev = (*stac_a);
-		(*stac_b) = tmp;
-		(*stac_a) = NULL;
+		(*stack_a)->next = (*stack_b);
+		(*stack_a)->prev = ft_lstlast(*stack_b);
+		ft_lstlast(*stack_b)->next = (*stack_a);
+		(*stack_b)->prev = (*stack_a);
+		(*stack_b) = tmp;
+		(*stack_a) = NULL;
 	}
 }
 
-void	rotate(t_list **stac)
+void	rotate(t_list **stack)
 {
-	*stac = (*stac)->next;
+	*stack = (*stack)->next;
 }
 
-void	reverse_rotate(t_list **stac)
+void	reverse_rotate(t_list **stack)
 {
-	*stac = (*stac)->prev;
+	*stack = (*stack)->prev;
 }
 
-void	command(int command, t_list **stac_a, t_list **stac_b)
+void	put_command(int command)
 {
-	void	(*f[NUM])(t_list **stac);
-	t_list	**stac;
+	if (command == SA)
+		write(1, "SA\n", 3);
+	if (command == SB)
+		write(1, "SB\n", 3);
+	if (command == SS)
+		write(1, "SS\n", 3);
+	if (command == PA)
+		write(1, "PA\n", 3);
+	if (command == PB)
+		write(1, "PB\n", 3);
+	if (command == RA)
+		write(1, "RA\n", 3);
+	if (command == RB)
+		write(1, "RB\n", 3);
+	if (command == RR)
+		write(1, "RR\n", 3);
+	if (command == RRA)
+		write(1, "RRA\n", 4);
+	if (command == RRB)
+		write(1, "RRB\n", 4);
+	if (command == RRR)
+		write(1, "RRR\n", 4);
+}
+
+void	command(int command, t_list **stack_a, t_list **stack_b)
+{
+	void	(*f[NUM])(t_list **stack);
+	t_list	**stack;
 
 	f[SA] = swap;
 	f[SB] = swap;
@@ -70,13 +99,15 @@ void	command(int command, t_list **stac_a, t_list **stac_b)
 	f[RRA] = reverse_rotate;
 	f[RRB] = reverse_rotate;
 	if (command == SA || command == RA || command == RRA)
-		stac = stac_a;
+		stack = stack_a;
 	else if (command == SB || command == RB || command == RRB)
-		stac = stac_b;
+		stack = stack_b;
 	if (!(command == PA || command == PB))
-		f[command](stac);
+		f[command](stack);
 	if (command == PA)
-		push(stac_a, stac_b);
+		push(stack_b, stack_a);
 	if (command == PB)
-		push(stac_b, stac_a);
+		push(stack_a, stack_b);
+	put_command(command);
+	// put_stack(*stack_a, *stack_b);
 }
