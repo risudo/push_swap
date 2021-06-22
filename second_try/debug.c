@@ -57,3 +57,16 @@ STAC_B:
 	// printf("i: %d\tvalue: %ld\n", i, stack_b->value);
 	// printf("\n");
 }
+
+void	put_data(t_data *data)
+{
+	printf("max: %d\n", data->max);
+	printf("min: %d\n", data->min);
+	printf("len: %d\n", data->len);
+	if (data->min_place == FORMER)
+		printf("min_place: FORMER\n");
+	else if (data->min_place == LATTER)
+		printf("min_place: LATTER\n");
+	printf("average: %d\n", data->average);
+	printf("sorted_len: %d\n", data->sorted_len);
+}

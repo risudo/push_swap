@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-void	update_value(t_dclist **stack, t_deta *data, int cnt)
+void	update_value(t_dclist **stack, t_data *data, int cnt)
 {
 	if (data->min > (*stack)->value)
 	{
@@ -17,7 +17,7 @@ void	push_data(t_dclist **stack, t_data *data)
 	int			cnt;
 
 	cnt = 0;
-	deta->sorted_len = 0;
+	data->sorted_len = 0;
 	p = (*stack);
 	data->max = (*stack)->value;
 	data->min = (*stack)->value;
@@ -29,7 +29,8 @@ void	push_data(t_dclist **stack, t_data *data)
 	}
 	update_value(stack, data, cnt);
 	data->len = cnt + 1;
-	if (data->len / 2 >= data->min_place || (data->len == 5 && data->min_place == 3))
+	if (data->len / 2 >= data->min_place
+		|| (data->len == 5 && data->min_place == 3))
 		data->min_place = FORMER;
 	else
 		data->min_place = LATTER;

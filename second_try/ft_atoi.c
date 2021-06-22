@@ -1,11 +1,11 @@
 #include "push_swap.h"
 
-int	ft_isdigit(int c)
+bool	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
-		return (1);
+		return (true);
 	else
-		return (0);
+		return (false);
 }
 
 int	error_check(long num, const char *str, int negative, int i)
@@ -35,7 +35,6 @@ int	*ft_atoi(const char *str)
 		negative = -1;
 		i++;
 	}
-	if (str[i])
 	while (str[i] != '\0')
 	{
 		num *= 10;

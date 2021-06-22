@@ -26,11 +26,22 @@ void	put_error(void)
 	exit(1);
 }
 
-// void	push_swap(t_dclist **stack_a, t_dclist **stack_b,
-// 	t_data *data_a, t_data *data_b)
-// {
-// 	return ;
-// }
+void	push_swap(t_dclist **stack_a, t_dclist **stack_b,
+	t_data *data_a, t_data *data_b)
+{
+	if (is_sorted(stack_a, stack_b, data_a))
+		return ;
+	if (data_a->len == 2)
+		command(SA, stack_a, stack_b);
+	if (data_a->len == 3)
+		sort_three_arg(stack_a, stack_b, data_a);
+	else if (data_a->len <= 5)
+		sort_five_arg(stack_a, stack_b, data_a);
+	// else
+	// 	quick_sort(stack_a, stack_b, data_a, data_b);
+	(void)data_b;
+	return ;
+}
 
 int	main(int argc, char **argv)
 {
@@ -42,8 +53,7 @@ int	main(int argc, char **argv)
 	if (argc == 1)
 		put_error();
 	make_stack_a(&stack_a, &data_a, argc, argv);
-	put_stack(stack_a, stack_b);
-	command(PB, &stack_a, &stack_b);
+	push_swap(&stack_a, &stack_b, &data_a, &data_b);
 	put_stack(stack_a, stack_b);
 	(void)data_b;
 	return (0);
