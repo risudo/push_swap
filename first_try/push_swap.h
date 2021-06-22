@@ -54,4 +54,9 @@ void	put_stack(t_list *stack_a, t_list *stack_b);
 int		is_sorted(t_list **stack_a, t_list **stack_b, t_deta *deta_a);
 void	quick_sort(t_list **stack_a, t_list **stack_b, t_deta *deta);
 void	quick_sort_pa(t_list **stack_a, t_list **stack_b, t_deta *deta_b);
+void	push_sorted_deta(t_list **stack, t_deta *deta);
+void	update_value(t_list **stack, t_deta *deta, int cnt);
+void	sort_stack_b(t_list **stack_a, t_list **stack_b, t_deta *deta);
+void	sort_three_stack_b(t_list **stack_a, t_list **stack_b, t_deta *deta);
+int	pa_small_node(t_list **stack_a, t_list **stack_b, t_deta *deta);
 #endif

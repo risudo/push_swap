@@ -22,6 +22,24 @@ int	is_stack(t_list **stack)
 	return (0);
 }
 
+void	push_sorted_deta(t_list **stack, t_deta *deta)
+{
+	int		i;
+	t_list	*p;
+
+	p = (*stack);
+	i = 0;
+	deta->max = (*stack)->value;
+	deta->min = (*stack)->value;
+	while (i < deta->sorted_len)
+	{
+		update_value(stack, deta, 0);
+		(*stack) = (*stack)->next;
+		i++;
+	}
+	deta->average = (deta->min + deta->max) / 2;
+}
+
 void	update_value(t_list **stack, t_deta *deta, int cnt)
 {
 	if (deta->min > (*stack)->value)
@@ -173,7 +191,7 @@ STAC_B:
 	printf("---b---\n");
 	if (!stack_b)
 	{
-		printf("(null)\n\n\n\n");
+		printf("(null)\n\n");
 		return ;
 	}
 	while (stack_b ->next != p_b)
@@ -235,7 +253,7 @@ int	main(int argc, char **argv)
 	if (error_check(argc, argv))
 		return (0);
 	make_stack_a(&stack_a, argc, argv, &deta);
-	// push_swap(&stack_a, &stack_b, &deta);
+	push_swap(&stack_a, &stack_b, &deta);
 	put_stack(stack_a, stack_b);
 
 
