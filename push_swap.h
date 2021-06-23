@@ -1,18 +1,19 @@
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
-# define FORMER 0
-# define LATTER 1
-# define SORTED 0
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
 # include <limits.h>
 # include <stdbool.h>
+# define FORMER 0
+# define LATTER 1
+# define SORTED -1
 
 typedef struct s_dclist
 {
 	int				value;
 	int				stage;
+	int				c_num;
 	struct s_dclist	*prev;
 	struct s_dclist	*next;
 }	t_dclist;
@@ -69,6 +70,9 @@ void		make_stack_a(t_dclist **stack_a, t_data *data_a,
 t_dclist	*ft_lstnew(int value);
 t_dclist	*ft_lstlast(t_dclist *list);
 void		ft_lstadd_back(t_dclist **list, t_dclist *new);
+
+//numbering_list.c
+void	numbering_list(t_dclist **stack_a, t_data *data_a);
 
 // command.c
 void		command(int command, t_dclist **stack_a, t_dclist **stack_b);

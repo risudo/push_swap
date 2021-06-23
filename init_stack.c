@@ -17,6 +17,7 @@ void	make_stack_a(t_dclist **stack_a, t_data *data_a, int argc, char **argv)
 		i++;
 	}
 	push_data(stack_a, data_a);
+	numbering_list(stack_a, data_a);
 }
 
 void	ft_lstadd_back(t_dclist **list, t_dclist *new)
@@ -53,7 +54,7 @@ t_dclist	*ft_lstnew(int value)
 	if (!new)
 		put_error();
 	new->value = value;
-	new->stage = -1;
+	new->stage = 0;
 	new->next = new;
 	new->prev = new;
 	return (new);
