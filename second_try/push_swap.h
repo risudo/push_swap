@@ -2,6 +2,7 @@
 # define PUSH_SWAP_H
 # define FORMER 0
 # define LATTER 1
+# define SORTED 0
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
@@ -11,6 +12,7 @@
 typedef struct s_dclist
 {
 	int				value;
+	int				stage;
 	struct s_dclist	*prev;
 	struct s_dclist	*next;
 }	t_dclist;
@@ -24,6 +26,12 @@ typedef struct s_data
 	int	average;
 	int	sorted_len;
 }	t_data;
+
+typedef struct s_tdata
+{
+	t_data	*data_a;
+	t_data	*data_b;
+}	t_tdata;
 
 enum	e_cmd
 {
@@ -41,8 +49,7 @@ enum	e_cmd
 	NUM
 };
 // mainc.c
-void		push_swap(t_dclist **stack_a, t_dclist **stack_b,
-				t_data *data_a, t_data *data_b);
+void		push_swap(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data);
 void		put_error(void);
 void		ft_lstadd_front(t_dclist **list, t_dclist *new);
 
@@ -54,6 +61,7 @@ bool		ft_isdigit(int c);
 // push_data.c
 void		push_data(t_dclist **stack, t_data *data);
 void		update_value(t_dclist **stack, t_data *data, int cnt);
+void		push_both_data(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data);
 
 // init_stack.c
 void		make_stack_a(t_dclist **stack_a, t_data *data_a,
@@ -65,16 +73,34 @@ void		ft_lstadd_back(t_dclist **list, t_dclist *new);
 // command.c
 void		command(int command, t_dclist **stack_a, t_dclist **stack_b);
 void		reverse_rotate(t_dclist **stack);
+void		swap(t_dclist **stack);
+void		push(t_dclist **stack_a, t_dclist **stack_b);
+void		rotate(t_dclist **stack);
+void		reverse_rotate(t_dclist **stack);
 
 // sort_three_five.c
 void		sort_three_arg(t_dclist **stack_a,
 				t_dclist **stack_b, t_data *data_a);
-void	recursive_pb(t_dclist **stack_a, t_dclist **stack_b, t_data *data_a);
-void	sort_five_arg(t_dclist **stack_a, t_dclist **stack_b, t_data *data_a);
+void		recursive_pb(t_dclist **stack_a, t_dclist **stack_b, t_data *data_a);
+void		sort_five_arg(t_dclist **stack_a, t_dclist **stack_b, t_data *data_a);
 
 // sort_utils.c
 bool		is_sorted(t_dclist **stack_a, t_dclist **stack_b, t_data *data_a);
 bool		is_stack(t_dclist **stack);
+bool 		bis_sorted(t_dclist **stack_b, t_data *data_b);
+
+// split_stack.c
+void		split_stack(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data);
+void		sortb_less_five(t_dclist **stack_a, t_dclist **stack_b, t_data *data_b);
+void		sortb_five(t_dclist **stack_a, t_dclist **stack_b, t_data *data_b);
+void		sortb_three(t_dclist **stack_a, t_dclist **stack_b, t_data *data_b);
+
+// quick_sort.c
+void	quick_sort(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data);
+
+// sort_ascending
+void		sortb_ascending(t_dclist **stack_a, t_dclist **stack_b, t_data *data_b);
+void		sortb_ascending_three(t_dclist **stack_a, t_dclist **stack_b, t_data *data_b);
 
 // debug.c
 void		put_stack(t_dclist *stack_a, t_dclist *stack_b);

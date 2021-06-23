@@ -1,0 +1,191 @@
+PB
+PB
+PB
+RA
+RA
+PB
+RA
+PB
+RA
+PB
+RA
+---a---
+i: 1	value: 1
+i: 2	value: 5
+i: 3	value: 8
+i: 4	value: 10
+i: 5	value: 4
+i: 6	value: 9
+i: 7	value: 6
+i: 8	value: 11
+i: 9	value: 2
+i: 10	value: 7
+
+---b---
+i: 1	value: 3
+
+---a---
+i: 1	value: 5
+i: 2	value: 8
+i: 3	value: 10
+i: 4	value: 4
+i: 5	value: 9
+i: 6	value: 6
+i: 7	value: 11
+i: 8	value: 2
+i: 9	value: 7
+
+---b---
+i: 1	value: 1
+i: 2	value: 3
+
+---a---
+i: 1	value: 8
+i: 2	value: 10
+i: 3	value: 4
+i: 4	value: 9
+i: 5	value: 6
+i: 6	value: 11
+i: 7	value: 2
+i: 8	value: 7
+
+---b---
+i: 1	value: 5
+i: 2	value: 1
+i: 3	value: 3
+
+---a---
+i: 1	value: 10
+i: 2	value: 4
+i: 3	value: 9
+i: 4	value: 6
+i: 5	value: 11
+i: 6	value: 2
+i: 7	value: 7
+i: 8	value: 8
+
+---b---
+i: 1	value: 5
+i: 2	value: 1
+i: 3	value: 3
+
+---a---
+i: 1	value: 4
+i: 2	value: 9
+i: 3	value: 6
+i: 4	value: 11
+i: 5	value: 2
+i: 6	value: 7
+i: 7	value: 8
+i: 8	value: 10
+
+---b---
+i: 1	value: 5
+i: 2	value: 1
+i: 3	value: 3
+
+---a---
+i: 1	value: 9
+i: 2	value: 6
+i: 3	value: 11
+i: 4	value: 2
+i: 5	value: 7
+i: 6	value: 8
+i: 7	value: 10
+
+---b---
+i: 1	value: 4
+i: 2	value: 5
+i: 3	value: 1
+i: 4	value: 3
+
+---a---
+i: 1	value: 6
+i: 2	value: 11
+i: 3	value: 2
+i: 4	value: 7
+i: 5	value: 8
+i: 6	value: 10
+i: 7	value: 9
+
+---b---
+i: 1	value: 4
+i: 2	value: 5
+i: 3	value: 1
+i: 4	value: 3
+
+---a---
+i: 1	value: 11
+i: 2	value: 2
+i: 3	value: 7
+i: 4	value: 8
+i: 5	value: 10
+i: 6	value: 9
+
+---b---
+i: 1	value: 6
+i: 2	value: 4
+i: 3	value: 5
+i: 4	value: 1
+i: 5	value: 3
+
+---a---
+i: 1	value: 2
+i: 2	value: 7
+i: 3	value: 8
+i: 4	value: 10
+i: 5	value: 9
+i: 6	value: 11
+
+---b---
+i: 1	value: 6
+i: 2	value: 4
+i: 3	value: 5
+i: 4	value: 1
+i: 5	value: 3
+
+---a---
+i: 1	value: 7
+i: 2	value: 8
+i: 3	value: 10
+i: 4	value: 9
+i: 5	value: 11
+
+---b---
+i: 1	value: 2
+i: 2	value: 6
+i: 3	value: 4
+i: 4	value: 5
+i: 5	value: 1
+i: 6	value: 3
+
+---a---
+i: 1	value: 8
+i: 2	value: 10
+i: 3	value: 9
+i: 4	value: 11
+i: 5	value: 7
+
+---b---
+i: 1	value: 2
+i: 2	value: 6
+i: 3	value: 4
+i: 4	value: 5
+i: 5	value: 1
+i: 6	value: 3
+
+---a---
+i: 1	value: 8
+i: 2	value: 10
+i: 3	value: 9
+i: 4	value: 11
+i: 5	value: 7
+
+---b---
+i: 1	value: 2
+i: 2	value: 6
+i: 3	value: 4
+i: 4	value: 5
+i: 5	value: 1
+i: 6	value: 3
+

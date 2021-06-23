@@ -26,34 +26,39 @@ void	put_error(void)
 	exit(1);
 }
 
-void	push_swap(t_dclist **stack_a, t_dclist **stack_b,
-	t_data *data_a, t_data *data_b)
+void	push_swap(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 {
-	if (is_sorted(stack_a, stack_b, data_a))
+	if (is_sorted(stack_a, stack_b, data->data_a))
 		return ;
-	if (data_a->len == 2)
+	else if (data->data_a->len == 2)
 		command(SA, stack_a, stack_b);
-	if (data_a->len == 3)
-		sort_three_arg(stack_a, stack_b, data_a);
-	else if (data_a->len <= 5)
-		sort_five_arg(stack_a, stack_b, data_a);
-	// else
-	// 	quick_sort(stack_a, stack_b, data_a, data_b);
-	(void)data_b;
+	else if (data->data_a->len == 3)
+		sort_three_arg(stack_a, stack_b, data->data_a);
+	else if (data->data_a->len <= 5)
+		sort_five_arg(stack_a, stack_b, data->data_a);
+	else
+		split_stack(stack_a, stack_b, data);
+	if (is_stack(stack_a) && is_stack(stack_b))
+		push_both_data(stack_a, stack_b, data);
 	return ;
 }
 
 int	main(int argc, char **argv)
 {
-	t_dclist	*stack_a = NULL;
-	t_dclist	*stack_b = NULL;
+	t_dclist	*stack_a;
+	t_dclist	*stack_b;
 	t_data		data_a;
 	t_data		data_b;
+	t_tdata		stack_data;
 
+	stack_a = NULL;
+	stack_b = NULL;
+	stack_data.data_a = &data_a;
+	stack_data.data_b = &data_b;
 	if (argc == 1)
 		put_error();
-	make_stack_a(&stack_a, &data_a, argc, argv);
-	push_swap(&stack_a, &stack_b, &data_a, &data_b);
+	make_stack_a(&stack_a, stack_data.data_a, argc, argv);
+	push_swap(&stack_a, &stack_b, &stack_data);
 	put_stack(stack_a, stack_b);
 	(void)data_b;
 	return (0);

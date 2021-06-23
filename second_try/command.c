@@ -1,5 +1,5 @@
 #include "push_swap.h"
-//*:	先頭の2つを入れ替える
+
 void	swap(t_dclist **stack)
 {
 	t_dclist	*stack_cpy;
@@ -20,8 +20,7 @@ void	swap(t_dclist **stack)
 	}
 	*stack = next_cpy;
 }
-//*:	第一引数の先頭を第二引数の先頭に移動する
-//*:	stack_aを全部stack_bに写そうとするとバグる
+
 void	push(t_dclist **stack_a, t_dclist **stack_b)
 {
 	t_dclist	*tmp_next;
@@ -109,5 +108,5 @@ void	command(int command, t_dclist **stack_a, t_dclist **stack_b)
 	if (command == PB)
 		push(stack_a, stack_b);
 	put_command(command);
-	// put_stack(*stack_a, *stack_b);
+	put_stack(*stack_a, *stack_b);
 }
