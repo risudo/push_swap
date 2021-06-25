@@ -25,6 +25,7 @@ typedef struct s_data
 	int	len;
 	int	min_place;
 	int	sorted_len;
+	int	max_c_num;
 }	t_data;
 
 typedef struct s_tdata
@@ -104,6 +105,7 @@ void		sort_11arg(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data);
 int			get_pivot(t_dclist **stack, t_data *data);
 void	pb_less_pivot(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data);
 void	pa_less_pivot(t_dclist **stack_a, t_dclist **stack_b, t_data *data_b);
+void	pb_same_status(t_dclist **stack_a, t_dclist **stack_b);
 // sort_ascending
 void		sortb_ascending(t_dclist **stack_a, t_dclist **stack_b, t_data *data_b);
 void		sortb_ascending_three(t_dclist **stack_a, t_dclist **stack_b, t_data *data_b);

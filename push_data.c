@@ -8,7 +8,10 @@ void	update_value(t_dclist **stack, t_data *data, int cnt)
 		data->min = (*stack)->value;
 	}
 	if (data->max < (*stack)->value)
+	{
 		data->max = (*stack)->value;
+		data->max_c_num = (*stack)->c_num;
+	}
 }
 
 void	push_data(t_dclist **stack, t_data *data)

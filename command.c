@@ -108,5 +108,5 @@ void	command(int command, t_dclist **stack_a, t_dclist **stack_b)
 	if (command == PB)
 		push(stack_a, stack_b);
 	put_command(command);
-	put_stack(*stack_a, *stack_b);
+	// put_stack(*stack_a, *stack_b);
 }

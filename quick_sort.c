@@ -6,6 +6,7 @@ void	pa_less_pivot(t_dclist **stack_a, t_dclist **stack_b, t_data *data_b)
 	int i;
 
 	i = 0;
+	push_data(stack_b, data_b);
 	pivot = get_pivot(stack_b, data_b);
 	while (i < data_b->len)
 	{
@@ -23,38 +24,33 @@ void	pa_less_pivot(t_dclist **stack_a, t_dclist **stack_b, t_data *data_b)
 
 void	quick_sort(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 {
-	int	pivot;
-	int i = -1;
-
+	// int	pivot;
+	// int i;
+	// i  =-1;
 	//5個以下になるまでPA
-	while (++i < 2)
+	if (is_sorted(stack_a, stack_b, data->data_a))
+		return ;
+	while (data->data_b->len > 5)
 	{
-		while (data->data_b->len > 5)
-		{
-			pa_less_pivot(stack_a, stack_b, data->data_b);
-		}
-		//BをソートしてPA,RA
-		sortb_five(stack_a, stack_b, data->data_b);
-		push_data(stack_b, data->data_b);
+		pa_less_pivot(stack_a, stack_b, data->data_b);
 	}
-	exit(0);
-	while (is_stack(stack_b))
-	{
-		if (data->data_b->len <= 5)
-		{
-			sortb_five(stack_a, stack_b, data->data_b);
-			pivot = (*stack_a)->status;
-			while (pivot == (*stack_a)->status)
-			{
-				command(PB, stack_a, stack_b);
-			}
-		}
-		push_data(stack_b, data->data_b);
-		if (data->data_b->len <= 5)
-			sortb_five(stack_a, stack_b, data->data_b);
-	}
-	pb_less_pivot(stack_a, stack_b, data);
+	//BをソートしてPA,RA
 	sortb_five(stack_a, stack_b, data->data_b);
+	//Aの先頭statusと同じやつをPB
+	pb_same_status(stack_a, stack_b);
+	//5個以下になるまでPA
+	push_both_data(stack_a, stack_b, data);
+	quick_sort(stack_a, stack_b, data);
+
+}
+
+void	pb_same_status(t_dclist **stack_a, t_dclist **stack_b)
+{
+	int	status;
+
+	status = (*stack_a)->status;
+	while (status == (*stack_a)->status && status != SORTED)
+		command(PB, stack_a, stack_b);
 }
 
 //Aの未ソートのpivot以下をPBする
@@ -89,7 +85,7 @@ int	get_pivot(t_dclist **stack, t_data *data)
 		min = (*stack)->prev->c_num + 1;
 	else
 		min = data->min;
-	return ((data->len + min - 1) / 2);
+	return ((data->max_c_num + min) / 2);
 }
 
 void	sort_11arg(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
