@@ -3,11 +3,13 @@
 void	pb_less_ave(t_dclist **stack_a, t_dclist **stack_b, t_data *data_a)
 {
 	int	i;
+	int	pivot;
 
 	i = 0;
+	pivot = data_a->len / 2;
 	while (i < data_a->len)
 	{
-		if ((*stack_a)->value <= data_a->average)
+		if ((*stack_a)->c_num <= pivot)
 			command(PB, stack_a, stack_b);
 		else
 			command(RA, stack_a, stack_b);
@@ -27,10 +29,13 @@ void	split_stack(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 		sortb_ascending(stack_a, stack_b, data->data_b);
 		return ;
 	}
+	else if (data->data_b->len <= 5)
+	{
+		sort_11arg(stack_a, stack_b, data);
+		return ;
+	}
 	quick_sort(stack_a, stack_b, data);
 }
-
-
 
 
 	// 		1. 平均以下をPB

@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-void	make_stack_a(t_dclist **stack_a, t_data *data_a, int argc, char **argv)
+void	init_stack_a(t_dclist **stack_a, t_data *data_a, int argc, char **argv)
 {
 	int			i;
 	t_dclist	*tmp;
@@ -54,8 +54,44 @@ t_dclist	*ft_lstnew(int value)
 	if (!new)
 		put_error();
 	new->value = value;
-	new->stage = 0;
+	new->status = 0;
+	new->c_num = 1;
 	new->next = new;
 	new->prev = new;
 	return (new);
+}
+
+void	numbering_list(t_dclist **stack_a, t_data *data_a)
+{
+	int	i;
+	int	j;
+	int	min_cmp;
+	int	next_min;
+
+	i = 0;
+	min_cmp = data_a->min;
+	while (i < data_a->len)
+	{
+		next_min = data_a->max;
+		j = 0;
+		while (j < data_a->len)
+		{
+			if ((*stack_a)->value > min_cmp)
+				(*stack_a)->c_num++;
+			if ((*stack_a)->value < next_min && (*stack_a)->value > min_cmp)
+				next_min = (*stack_a)->value;
+			(*stack_a) = (*stack_a)->next;
+			j++;
+		}
+		min_cmp = next_min;
+		i++;
+	}
+	// i = 0;
+	// while (i < data_a->len)
+	// {
+	// 	printf("c_num: %d\n", (*stack_a)->c_num);
+	// 	(*stack_a) = (*stack_a)->next;
+	// 	i++;
+	// }
+	// exit(0);
 }

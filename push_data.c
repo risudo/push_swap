@@ -34,12 +34,13 @@ void	push_data(t_dclist **stack, t_data *data)
 		data->min_place = FORMER;
 	else
 		data->min_place = LATTER;
-	data->average = (data->min + data->max) / 2;
 	(*stack) = p;
 }
 
 void	push_both_data(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 {
-	push_data(stack_a, data->data_a);
-	push_data(stack_b, data->data_b);
+	if (is_stack(stack_a))
+		push_data(stack_a, data->data_a);
+	if (is_stack(stack_b))
+		push_data(stack_b, data->data_b);
 }

@@ -17,11 +17,11 @@ void	put_stack(t_dclist *stack_a, t_dclist *stack_b)
 	}
 	while (stack_a ->next != p_a)
 	{
-		printf("i: %d\tvalue: %d\n", i, stack_a->value);
+		printf("i: %d\tvalue: %d\tstatus: %d\n", i, stack_a->value, stack_a->status);
 		stack_a = stack_a->next;
 		i++;
 	}
-	printf("i: %d\tvalue: %d\n", i, stack_a->value);
+	printf("i: %d\tvalue: %d\tstatus: %d\n", i, stack_a->value, stack_a->status);
 	// printf("\n");
 	// while (stack_a != p_a)
 	// {
@@ -42,11 +42,11 @@ STAC_B:
 	}
 	while (stack_b ->next != p_b)
 	{
-		printf("i: %d\tvalue: %d\n", i, stack_b->value);
+		printf("i: %d\tvalue: %d\tstatus: %d\n", i, stack_b->value, stack_b->status);
 		stack_b = stack_b->next;
 		i++;
 	}
-	printf("i: %d\tvalue: %d\n", i, stack_b->value);
+	printf("i: %d\tvalue: %d\tstatus: %d\n", i, stack_b->value, stack_b->status);
 	printf("\n");
 	// while (stack_b != p_b)
 	// {
@@ -67,6 +67,5 @@ void	put_data(t_data *data)
 		printf("min_place: FORMER\n");
 	else if (data->min_place == LATTER)
 		printf("min_place: LATTER\n");
-	printf("average: %d\n", data->average);
 	printf("sorted_len: %d\n", data->sorted_len);
 }

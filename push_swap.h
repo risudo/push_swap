@@ -12,7 +12,7 @@
 typedef struct s_dclist
 {
 	int				value;
-	int				stage;
+	int				status;
 	int				c_num;
 	struct s_dclist	*prev;
 	struct s_dclist	*next;
@@ -24,7 +24,6 @@ typedef struct s_data
 	int	min;
 	int	len;
 	int	min_place;
-	int	average;
 	int	sorted_len;
 }	t_data;
 
@@ -65,14 +64,13 @@ void		update_value(t_dclist **stack, t_data *data, int cnt);
 void		push_both_data(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data);
 
 // init_stack.c
-void		make_stack_a(t_dclist **stack_a, t_data *data_a,
+void		init_stack_a(t_dclist **stack_a, t_data *data_a,
 				 int argc, char **argv);
 t_dclist	*ft_lstnew(int value);
 t_dclist	*ft_lstlast(t_dclist *list);
 void		ft_lstadd_back(t_dclist **list, t_dclist *new);
+void		numbering_list(t_dclist **stack_a, t_data *data_a);
 
-//numbering_list.c
-void	numbering_list(t_dclist **stack_a, t_data *data_a);
 
 // command.c
 void		command(int command, t_dclist **stack_a, t_dclist **stack_b);
@@ -91,7 +89,7 @@ void		sort_five_arg(t_dclist **stack_a, t_dclist **stack_b, t_data *data_a);
 // sort_utils.c
 bool		is_sorted(t_dclist **stack_a, t_dclist **stack_b, t_data *data_a);
 bool		is_stack(t_dclist **stack);
-bool 		bis_sorted(t_dclist **stack_b, t_data *data_b);
+bool		bis_sorted(t_dclist **stack_b, t_data *data_b);
 
 // split_stack.c
 void		split_stack(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data);
@@ -100,8 +98,12 @@ void		sortb_five(t_dclist **stack_a, t_dclist **stack_b, t_data *data_b);
 void		sortb_three(t_dclist **stack_a, t_dclist **stack_b, t_data *data_b);
 
 // quick_sort.c
-void	quick_sort(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data);
-
+void		quick_sort(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data);
+void		pa_ra_sortedb(t_dclist **stack_a, t_dclist **stack_b);
+void		sort_11arg(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data);
+int			get_pivot(t_dclist **stack, t_data *data);
+void	pb_less_pivot(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data);
+void	pa_less_pivot(t_dclist **stack_a, t_dclist **stack_b, t_data *data_b);
 // sort_ascending
 void		sortb_ascending(t_dclist **stack_a, t_dclist **stack_b, t_data *data_b);
 void		sortb_ascending_three(t_dclist **stack_a, t_dclist **stack_b, t_data *data_b);

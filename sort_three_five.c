@@ -37,7 +37,7 @@ void	recursive_pb(t_dclist **stack_a, t_dclist **stack_b, t_data *data_a)
 		cmd = RRA;
 	while ((*stack_a)->value != data_a->min)
 		command(cmd, stack_a, stack_b);
-	(*stack_a)->stage++;
+	(*stack_a)->status++;
 	command(PB, stack_a, stack_b);
 	push_data(stack_a, data_a);
 	recursive_pb(stack_a, stack_b, data_a);
@@ -45,11 +45,15 @@ void	recursive_pb(t_dclist **stack_a, t_dclist **stack_b, t_data *data_a)
 
 void	sort_five_arg(t_dclist **stack_a, t_dclist **stack_b, t_data *data_a)
 {
-	int	stage;
+	int	status;
 
-	stage = (*stack_a)->stage;
 	recursive_pb(stack_a, stack_b, data_a);
 	sort_three_arg(stack_a, stack_b, data_a);
-	while (is_stack(stack_b) && (*stack_a)->stage == stage)
+	if (is_stack(stack_b))
+		status = (*stack_b)->status;
+	while (is_stack(stack_b) && status == (*stack_b)->status)
+	{
 		command(PA, stack_a, stack_b);
+		(*stack_a)->status--;
+	}
 }

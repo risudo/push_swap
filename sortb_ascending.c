@@ -2,12 +2,6 @@
 
 void	sortb_ascending(t_dclist **stack_a, t_dclist **stack_b, t_data *data_b)
 {
-
-	if (data_b->len == 3)
-	{
-		sortb_ascending_three(stack_a, stack_b, data_b);
-		return ;
-	}
 	while (data_b->len != 3)
 	{
 		while ((*stack_b)->value != data_b->max)

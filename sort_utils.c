@@ -34,6 +34,7 @@ bool bis_sorted(t_dclist **stack_b, t_data *data_b)
 	{
 		if (tmp > (*stack_b)->value)
 			return (false);
+		tmp = (*stack_b)->value;
 		(*stack_b) = (*stack_b)->next;
 	}
 	return (true);

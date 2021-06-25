@@ -38,8 +38,7 @@ void	push_swap(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 		sort_five_arg(stack_a, stack_b, data->data_a);
 	else
 		split_stack(stack_a, stack_b, data);
-	if (is_stack(stack_a) && is_stack(stack_b))
-		push_both_data(stack_a, stack_b, data);
+	push_both_data(stack_a, stack_b, data);
 	return ;
 }
 
@@ -57,9 +56,8 @@ int	main(int argc, char **argv)
 	stack_data.data_b = &data_b;
 	if (argc == 1)
 		put_error();
-	make_stack_a(&stack_a, stack_data.data_a, argc, argv);
+	init_stack_a(&stack_a, stack_data.data_a, argc, argv);
 	push_swap(&stack_a, &stack_b, &stack_data);
 	put_stack(stack_a, stack_b);
-	(void)data_b;
 	return (0);
 }
