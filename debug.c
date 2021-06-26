@@ -17,11 +17,11 @@ void	put_stack(t_dclist *stack_a, t_dclist *stack_b)
 	}
 	while (stack_a ->next != p_a)
 	{
-		printf("i: %d\tvalue: %d\tstatus: %d\n", i, stack_a->value, stack_a->status);
+		printf("i: %d\tvalue: %d\tc_num: %d\tstatus: %d\n", i, stack_a->value, stack_a->c_num, stack_a->status);
 		stack_a = stack_a->next;
 		i++;
 	}
-	printf("i: %d\tvalue: %d\tstatus: %d\n", i, stack_a->value, stack_a->status);
+	printf("i: %d\tvalue: %d\tc_num: %d\tstatus: %d\n", i, stack_a->value, stack_a->c_num, stack_a->status);
 	// printf("\n");
 	// while (stack_a != p_a)
 	// {
@@ -42,11 +42,11 @@ STAC_B:
 	}
 	while (stack_b ->next != p_b)
 	{
-		printf("i: %d\tvalue: %d\tstatus: %d\n", i, stack_b->value, stack_b->status);
+		printf("i: %d\tvalue: %d\tc_num: %d\tstatus: %d\n", i, stack_b->value, stack_b->c_num, stack_b->status);
 		stack_b = stack_b->next;
 		i++;
 	}
-	printf("i: %d\tvalue: %d\tstatus: %d\n", i, stack_b->value, stack_b->status);
+	printf("i: %d\tvalue: %d\tc_num: %d\tstatus: %d\n", i, stack_b->value, stack_b->c_num, stack_b->status);
 	printf("\n");
 	// while (stack_b != p_b)
 	// {
@@ -62,6 +62,8 @@ void	put_data(t_data *data)
 {
 	printf("max: %d\n", data->max);
 	printf("min: %d\n", data->min);
+	printf("min_c_num: %d\n", data->min_c_num);
+	printf("max_c_num: %d\n", data->max_c_num);
 	printf("len: %d\n", data->len);
 	if (data->min_place == FORMER)
 		printf("min_place: FORMER\n");

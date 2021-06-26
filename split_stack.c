@@ -29,11 +29,11 @@ void	split_stack(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 		sortb_ascending(stack_a, stack_b, data->data_b);
 		return ;
 	}
-	else if (data->data_b->len <= 5)
-	{
-		sort_11arg(stack_a, stack_b, data);
-		return ;
-	}
+	// else if (data->data_b->len <= 5)
+	// {
+	// 	sort_11arg(stack_a, stack_b, data);
+	// 	return ;
+	// }
 	quick_sort(stack_a, stack_b, data);
 }
 

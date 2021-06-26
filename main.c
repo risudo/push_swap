@@ -58,6 +58,11 @@ int	main(int argc, char **argv)
 		put_error();
 	init_stack_a(&stack_a, stack_data.data_a, argc, argv);
 	push_swap(&stack_a, &stack_b, &stack_data);
-	put_stack(stack_a, stack_b);
+	// command(PB, &stack_a, &stack_b);
+	// command(PB, &stack_a, &stack_b);
+	// command(PB, &stack_a, &stack_b);
+	// command(SB, &stack_a, &stack_b);
+	// command(SB, &stack_a, &stack_b);
+	// put_stack(stack_a, stack_b);
 	return (0);
 }

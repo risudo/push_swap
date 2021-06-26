@@ -5,6 +5,7 @@ void	update_value(t_dclist **stack, t_data *data, int cnt)
 	if (data->min > (*stack)->value)
 	{
 		data->min_place = cnt + 1;
+		data->min_c_num = (*stack)->c_num;
 		data->min = (*stack)->value;
 	}
 	if (data->max < (*stack)->value)
@@ -24,6 +25,8 @@ void	push_data(t_dclist **stack, t_data *data)
 	p = (*stack);
 	data->max = (*stack)->value;
 	data->min = (*stack)->value;
+	data->max_c_num = (*stack)->c_num;
+	data->min_c_num = (*stack)->c_num;
 	while ((*stack)->next != p)
 	{
 		update_value(stack, data, cnt);

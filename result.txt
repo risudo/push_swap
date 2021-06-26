@@ -1,195 +1,862 @@
-PB
-PB
-RA
-PB
-PB
-PB
-RA
-RA
-RA
-RA
-RA
-RA
-PB
-RA
-PB
-RA
-RA
-PB
-RA
-PB
-PB
-RA
-PB
-PA
-PA
-PA
-RB
-PA
-RB
-PA
-RB
-RB
-RB
-RB
-PA
-PA
-RB
-PA
-RB
-RB
-SB
-RB
-PA
-RA
-PA
-RA
-PA
-RA
-PB
-PB
-PB
-PB
-PB
-PB
-PB
-PB
-PA
-PA
-RB
-PA
-PA
-RB
-RB
-RB
-PA
-RA
-SB
-PA
-RA
-PA
-RA
-PA
-RA
-PB
-PB
-PB
-PB
-PA
-RA
-PA
-RA
-PA
-RA
-PA
-RA
-PB
-PB
-PB
-PB
-PB
-PB
-PB
-PB
-PB
-PB
-PB
-PB
-RB
-PA
-PA
-RB
-PA
-PA
-RB
-PA
-PA
-RB
-RB
-RB
-PA
-RB
-PA
-RB
-PA
-RB
-PA
-RA
-PA
-RA
-PA
-RA
-PB
-PB
-PB
-PB
-PB
-PB
-PB
-PB
-PB
-PA
-PA
-PA
-RB
-PA
-RB
-RB
-RB
-RB
-RRB
-RRB
-RRB
-PA
-RA
-RRB
-PA
-RA
-SB
-RB
-PA
-RA
-PA
-RA
-PA
-RA
-PB
-PB
-PB
-PB
-PA
-RA
-PA
-RA
-PA
-RA
-PA
-RA
+598 992 1 980 924 141 890 866 804 864 404
+pb
+ra
+pb
+ra
+ra
+pb
+ra
+ra
+pb
+ra
+pb
+rrb
+rrb
+pa
+---a---
+i: 1	value: 992	status: 0
+i: 2	value: 1	status: 0
+i: 3	value: 980	status: 0
+i: 4	value: 924	status: 0
+i: 5	value: 141	status: 0
+i: 6	value: 890	status: 0
+i: 7	value: 866	status: 0
+i: 8	value: 804	status: 0
+i: 9	value: 864	status: 0
+i: 10	value: 404	status: 0
+
+---b---
+i: 1	value: 598	status: 0
+
+---a---
+i: 1	value: 1	status: 0
+i: 2	value: 980	status: 0
+i: 3	value: 924	status: 0
+i: 4	value: 141	status: 0
+i: 5	value: 890	status: 0
+i: 6	value: 866	status: 0
+i: 7	value: 804	status: 0
+i: 8	value: 864	status: 0
+i: 9	value: 404	status: 0
+i: 10	value: 992	status: 0
+
+---b---
+i: 1	value: 598	status: 0
+
+---a---
+i: 1	value: 980	status: 0
+i: 2	value: 924	status: 0
+i: 3	value: 141	status: 0
+i: 4	value: 890	status: 0
+i: 5	value: 866	status: 0
+i: 6	value: 804	status: 0
+i: 7	value: 864	status: 0
+i: 8	value: 404	status: 0
+i: 9	value: 992	status: 0
+
+---b---
+i: 1	value: 1	status: 0
+i: 2	value: 598	status: 0
+
+---a---
+i: 1	value: 924	status: 0
+i: 2	value: 141	status: 0
+i: 3	value: 890	status: 0
+i: 4	value: 866	status: 0
+i: 5	value: 804	status: 0
+i: 6	value: 864	status: 0
+i: 7	value: 404	status: 0
+i: 8	value: 992	status: 0
+i: 9	value: 980	status: 0
+
+---b---
+i: 1	value: 1	status: 0
+i: 2	value: 598	status: 0
+
+---a---
+i: 1	value: 141	status: 0
+i: 2	value: 890	status: 0
+i: 3	value: 866	status: 0
+i: 4	value: 804	status: 0
+i: 5	value: 864	status: 0
+i: 6	value: 404	status: 0
+i: 7	value: 992	status: 0
+i: 8	value: 980	status: 0
+i: 9	value: 924	status: 0
+
+---b---
+i: 1	value: 1	status: 0
+i: 2	value: 598	status: 0
+
+---a---
+i: 1	value: 890	status: 0
+i: 2	value: 866	status: 0
+i: 3	value: 804	status: 0
+i: 4	value: 864	status: 0
+i: 5	value: 404	status: 0
+i: 6	value: 992	status: 0
+i: 7	value: 980	status: 0
+i: 8	value: 924	status: 0
+
+---b---
+i: 1	value: 141	status: 0
+i: 2	value: 1	status: 0
+i: 3	value: 598	status: 0
+
+---a---
+i: 1	value: 866	status: 0
+i: 2	value: 804	status: 0
+i: 3	value: 864	status: 0
+i: 4	value: 404	status: 0
+i: 5	value: 992	status: 0
+i: 6	value: 980	status: 0
+i: 7	value: 924	status: 0
+i: 8	value: 890	status: 0
+
+---b---
+i: 1	value: 141	status: 0
+i: 2	value: 1	status: 0
+i: 3	value: 598	status: 0
+
+---a---
+i: 1	value: 804	status: 0
+i: 2	value: 864	status: 0
+i: 3	value: 404	status: 0
+i: 4	value: 992	status: 0
+i: 5	value: 980	status: 0
+i: 6	value: 924	status: 0
+i: 7	value: 890	status: 0
+i: 8	value: 866	status: 0
+
+---b---
+i: 1	value: 141	status: 0
+i: 2	value: 1	status: 0
+i: 3	value: 598	status: 0
+
+---a---
+i: 1	value: 864	status: 0
+i: 2	value: 404	status: 0
+i: 3	value: 992	status: 0
+i: 4	value: 980	status: 0
+i: 5	value: 924	status: 0
+i: 6	value: 890	status: 0
+i: 7	value: 866	status: 0
+
+---b---
+i: 1	value: 804	status: 0
+i: 2	value: 141	status: 0
+i: 3	value: 1	status: 0
+i: 4	value: 598	status: 0
+
+---a---
+i: 1	value: 404	status: 0
+i: 2	value: 992	status: 0
+i: 3	value: 980	status: 0
+i: 4	value: 924	status: 0
+i: 5	value: 890	status: 0
+i: 6	value: 866	status: 0
+i: 7	value: 864	status: 0
+
+---b---
+i: 1	value: 804	status: 0
+i: 2	value: 141	status: 0
+i: 3	value: 1	status: 0
+i: 4	value: 598	status: 0
+
+---a---
+i: 1	value: 992	status: 0
+i: 2	value: 980	status: 0
+i: 3	value: 924	status: 0
+i: 4	value: 890	status: 0
+i: 5	value: 866	status: 0
+i: 6	value: 864	status: 0
+
+---b---
+i: 1	value: 404	status: 0
+i: 2	value: 804	status: 0
+i: 3	value: 141	status: 0
+i: 4	value: 1	status: 0
+i: 5	value: 598	status: 0
+
+---a---
+i: 1	value: 992	status: 0
+i: 2	value: 980	status: 0
+i: 3	value: 924	status: 0
+i: 4	value: 890	status: 0
+i: 5	value: 866	status: 0
+i: 6	value: 864	status: 0
+
+---b---
+i: 1	value: 598	status: 0
+i: 2	value: 404	status: 0
+i: 3	value: 804	status: 0
+i: 4	value: 141	status: 0
+i: 5	value: 1	status: 0
+
+---a---
+i: 1	value: 992	status: 0
+i: 2	value: 980	status: 0
+i: 3	value: 924	status: 0
+i: 4	value: 890	status: 0
+i: 5	value: 866	status: 0
+i: 6	value: 864	status: 0
+
+---b---
+i: 1	value: 1	status: 0
+i: 2	value: 598	status: 0
+i: 3	value: 404	status: 0
+i: 4	value: 804	status: 0
+i: 5	value: 141	status: 0
+
 ---a---
 i: 1	value: 1	status: -1
-i: 2	value: 2	status: -1
-i: 3	value: 3	status: -1
-i: 4	value: 4	status: -1
-i: 5	value: 5	status: -1
-i: 6	value: 6	status: -1
-i: 7	value: 7	status: -1
-i: 8	value: 8	status: -1
-i: 9	value: 9	status: -1
-i: 10	value: 10	status: -1
-i: 11	value: 11	status: -1
-i: 12	value: 12	status: -1
-i: 13	value: 13	status: -1
-i: 14	value: 14	status: -1
-i: 15	value: 15	status: -1
-i: 16	value: 16	status: -1
-i: 17	value: 17	status: -1
-i: 18	value: 18	status: -1
-i: 19	value: 19	status: -1
-i: 20	value: 20	status: -1
-i: 21	value: 21	status: -1
-i: 22	value: 22	status: -1
-i: 23	value: 23	status: -1
+i: 2	value: 992	status: 0
+i: 3	value: 980	status: 0
+i: 4	value: 924	status: 0
+i: 5	value: 890	status: 0
+i: 6	value: 866	status: 0
+i: 7	ra
+rrb
+pa
+ra
+sb
+pa
+ra
+pa
+ra
+pa
+ra
+pb
+pb
+value: 864	status: 0
+
+---b---
+i: 1	value: 598	status: 0
+i: 2	value: 404	status: 0
+i: 3	value: 804	status: 0
+i: 4	value: 141	status: 0
+
+---a---
+i: 1	value: 992	status: 0
+i: 2	value: 980	status: 0
+i: 3	value: 924	status: 0
+i: 4	value: 890	status: 0
+i: 5	value: 866	status: 0
+i: 6	value: 864	status: 0
+i: 7	value: 1	status: -1
+
+---b---
+i: 1	value: 598	status: 0
+i: 2	value: 404	status: 0
+i: 3	value: 804	status: 0
+i: 4	value: 141	status: 0
+
+---a---
+i: 1	value: 992	status: 0
+i: 2	value: 980	status: 0
+i: 3	value: 924	status: 0
+i: 4	value: 890	status: 0
+i: 5	value: 866	status: 0
+i: 6	value: 864	status: 0
+i: 7	value: 1	status: -1
+
+---b---
+i: 1	value: 141	status: 0
+i: 2	value: 598	status: 0
+i: 3	value: 404	status: 0
+i: 4	value: 804	status: 0
+
+---a---
+i: 1	value: 141	status: -1
+i: 2	value: 992	status: 0
+i: 3	value: 980	status: 0
+i: 4	value: 924	status: 0
+i: 5	value: 890	status: 0
+i: 6	value: 866	status: 0
+i: 7	value: 864	status: 0
+i: 8	value: 1	status: -1
+
+---b---
+i: 1	value: 598	status: 0
+i: 2	value: 404	status: 0
+i: 3	value: 804	status: 0
+
+---a---
+i: 1	value: 992	status: 0
+i: 2	value: 980	status: 0
+i: 3	value: 924	status: 0
+i: 4	value: 890	status: 0
+i: 5	value: 866	status: 0
+i: 6	value: 864	status: 0
+i: 7	value: 1	status: -1
+i: 8	value: 141	status: -1
+
+---b---
+i: 1	value: 598	status: 0
+i: 2	value: 404	status: 0
+i: 3	value: 804	status: 0
+
+---a---
+i: 1	value: 992	status: 0
+i: 2	value: 980	status: 0
+i: 3	value: 924	status: 0
+i: 4	value: 890	status: 0
+i: 5	value: 866	status: 0
+i: 6	value: 864	status: 0
+i: 7	value: 1	status: -1
+i: 8	value: 141	status: -1
+
+---b---
+i: 1	value: 404	status: 0
+i: 2	value: 598	status: 0
+i: 3	value: 804	status: 0
+
+---a---
+i: 1	value: 404	status: -1
+i: 2	value: 992	status: 0
+i: 3	value: 980	status: 0
+i: 4	value: 924	status: 0
+i: 5	value: 890	status: 0
+i: 6	value: 866	status: 0
+i: 7	value: 864	status: 0
+i: 8	value: 1	status: -1
+i: 9	value: 141	status: -1
+
+---b---
+i: 1	value: 598	status: 0
+i: 2	value: 804	status: 0
+
+---a---
+i: 1	value: 992	status: 0
+i: 2	value: 980	status: 0
+i: 3	value: 924	status: 0
+i: 4	value: 890	status: 0
+i: 5	value: 866	status: 0
+i: 6	value: 864	status: 0
+i: 7	value: 1	status: -1
+i: 8	value: 141	status: -1
+i: 9	value: 404	status: -1
+
+---b---
+i: 1	value: 598	status: 0
+i: 2	value: 804	status: 0
+
+---a---
+i: 1	value: 598	status: -1
+i: 2	value: 992	status: 0
+i: 3	value: 980	status: 0
+i: 4	value: 924	status: 0
+i: 5	value: 890	status: 0
+i: 6	value: 866	status: 0
+i: 7	value: 864	status: 0
+i: 8	value: 1	status: -1
+i: 9	value: 141	status: -1
+i: 10	value: 404	status: -1
+
+---b---
+i: 1	value: 804	status: 0
+
+---a---
+i: 1	value: 992	status: 0
+i: 2	value: 980	status: 0
+i: 3	value: 924	status: 0
+i: 4	value: 890	status: 0
+i: 5	value: 866	status: 0
+i: 6	value: 864	status: 0
+i: 7	value: 1	status: -1
+i: 8	value: 141	status: -1
+i: 9	value: 404	status: -1
+i: 10	value: 598	status: -1
+
+---b---
+i: 1	value: 804	status: 0
+
+---a---
+i: 1	value: 804	status: -1
+i: 2	value: 992	status: 0
+i: 3	value: 980	status: 0
+i: 4	value: 924	status: 0
+i: 5	value: 890	status: 0
+i: 6	value: 866	status: 0
+i: 7	value: 864	status: 0
+i: 8	value: 1	status: -1
+i: 9	value: 141	status: -1
+i: 10	value: 404	status: -1
+i: 11	value: 598	status: -1
 
 ---b---
 (null)
 
+---a---
+i: 1	value: 992	status: 0
+i: 2	value: 980	status: 0
+i: 3	value: 924	status: 0
+i: 4	value: 890	status: 0
+i: 5	value: 866	status: 0
+i: 6	value: 864	status: 0
+i: 7	value: 1	status: -1
+i: 8	value: 141	status: -1
+i: 9	value: 404	status: -1
+i: 10	value: 598	status: -1
+i: 11	value: 804	status: -1
+
+---b---
+(null)
+
+---a---
+i: 1	value: 980	status: 0
+i: 2	value: 924	status: 0
+i: 3	value: 890	status: 0
+i: 4	value: 866	status: 0
+i: 5	value: 864	status: 0
+i: 6	value: 1	status: -1
+i: 7	value: 141	status: -1
+i: 8	value: 404	status: -1
+i: 9	value: 598	status: -1
+i: 10	value: 804	status: -1
+
+---b---
+i: 1	value: 992	status: 0
+
+---a---
+i: 1	value: 924	status: 0
+i: 2	value: 890	status: 0
+i: 3	value: 866	status: 0
+i: 4	value: 864	status: 0
+i: 5	value: 1	status: -1
+i: 6	value: 141	status: -1
+i: 7	value: 404	status: -1
+i: 8	value: 598	status: -1
+i: 9	value: 804	status: -1
+
+---b---
+i: 1	value: 980	status: 0pb
+pb
+pb
+pb
+rb
+rb
+pa
+pa
+pa
+pa
+pb
+pb
+pb
+pb
+
+i: 2	value: 992	status: 0
+
+---a---
+i: 1	value: 890	status: 0
+i: 2	value: 866	status: 0
+i: 3	value: 864	status: 0
+i: 4	value: 1	status: -1
+i: 5	value: 141	status: -1
+i: 6	value: 404	status: -1
+i: 7	value: 598	status: -1
+i: 8	value: 804	status: -1
+
+---b---
+i: 1	value: 924	status: 0
+i: 2	value: 980	status: 0
+i: 3	value: 992	status: 0
+
+---a---
+i: 1	value: 866	status: 0
+i: 2	value: 864	status: 0
+i: 3	value: 1	status: -1
+i: 4	value: 141	status: -1
+i: 5	value: 404	status: -1
+i: 6	value: 598	status: -1
+i: 7	value: 804	status: -1
+
+---b---
+i: 1	value: 890	status: 0
+i: 2	value: 924	status: 0
+i: 3	value: 980	status: 0
+i: 4	value: 992	status: 0
+
+---a---
+i: 1	value: 864	status: 0
+i: 2	value: 1	status: -1
+i: 3	value: 141	status: -1
+i: 4	value: 404	status: -1
+i: 5	value: 598	status: -1
+i: 6	value: 804	status: -1
+
+---b---
+i: 1	value: 866	status: 0
+i: 2	value: 890	status: 0
+i: 3	value: 924	status: 0
+i: 4	value: 980	status: 0
+i: 5	value: 992	status: 0
+
+---a---
+i: 1	value: 1	status: -1
+i: 2	value: 141	status: -1
+i: 3	value: 404	status: -1
+i: 4	value: 598	status: -1
+i: 5	value: 804	status: -1
+
+---b---
+i: 1	value: 864	status: 0
+i: 2	value: 866	status: 0
+i: 3	value: 890	status: 0
+i: 4	value: 924	status: 0
+i: 5	value: 980	status: 0
+i: 6	value: 992	status: 0
+
+---a---
+i: 1	value: 1	status: -1
+i: 2	value: 141	status: -1
+i: 3	value: 404	status: -1
+i: 4	value: 598	status: -1
+i: 5	value: 804	status: -1
+
+---b---
+i: 1	value: 866	status: 0
+i: 2	value: 890	status: 0
+i: 3	value: 924	status: 0
+i: 4	value: 980	status: 0
+i: 5	value: 992	status: 0
+i: 6	value: 864	status: 0
+
+---a---
+i: 1	value: 1	status: -1
+i: 2	value: 141	status: -1
+i: 3	value: 404	status: -1
+i: 4	value: 598	status: -1
+i: 5	value: 804	status: -1
+
+---b---
+i: 1	value: 890	status: 0
+i: 2	value: 924	status: 0
+i: 3	value: 980	status: 0
+i: 4	value: 992	status: 0
+i: 5	value: 864	status: 0
+i: 6	value: 866	status: 0
+
+---a---
+i: 1	value: 890	status: 1
+i: 2	value: 1	status: -1
+i: 3	value: 141	status: -1
+i: 4	value: 404	status: -1
+i: 5	value: 598	status: -1
+i: 6	value: 804	status: -1
+
+---b---
+i: 1	value: 924	status: 0
+i: 2	value: 980	status: 0
+i: 3	value: 992	status: 0
+i: 4	value: 864	status: 0
+i: 5	value: 866	status: 0
+
+---a---
+i: 1	value: 924	status: 1
+i: 2	value: 890	status: 1
+i: 3	value: 1	status: -1
+i: 4	value: 141	status: -1
+i: 5	value: 404	status: -1
+i: 6	value: 598	status: -1
+i: 7	value: 804	status: -1
+
+---b---
+i: 1	value: 980	status: 0
+i: 2	value: 992	status: 0
+i: 3	value: 864	status: 0
+i: 4	value: 866	status: 0
+
+---a---
+i: 1	value: 980	status: 1
+i: 2	value: 924	status: 1
+i: 3	value: 890	status: 1
+i: 4	value: 1	status: -1
+i: 5	value: 141	status: -1
+i: 6	value: 404	status: -1
+i: 7	value: 598	status: -1
+i: 8	value: 804	status: -1
+
+---b---
+i: 1	value: 992	status: 0
+i: 2	value: 864	status: 0
+i: 3	value: 866	status: 0
+
+---a---
+i: 1	value: 992	status: 1
+i: 2	value: 980	status: 1
+i: 3	value: 924	status: 1
+i: 4	value: 890	status: 1
+i: 5	value: 1	status: -1
+i: 6	value: 141	status: -1
+i: 7	value: 404	status: -1
+i: 8	value: 598	status: -1
+i: 9	value: 804	status: -1
+
+---b---
+i: 1	value: 864	status: 0
+i: 2	value: 866	status: 0
+
+---a---
+i: 1	value: 980	status: 1
+i: 2	value: 924	status: 1
+i: 3	value: 890	status: 1
+i: 4	value: 1	status: -1
+i: 5	value: 141	status: -1
+i: 6	value: 404	status: -1
+i: 7	value: 598	status: -1
+i: 8	value: 804	status: -1
+
+---b---
+i: 1	value: 992	status: 1
+i: 2	value: 864	status: 0
+i: 3	value: 866	status: 0
+
+---a---
+i: 1	value: 924	status: 1
+i: 2	value: 890	status: 1
+i: 3	value: 1	status: -1
+i: 4	value: 141	status: -1
+i: 5	value: 404	status: -1
+i: 6	value: 598	status: -1
+i: 7	value: 804	status: -1
+
+---b---
+i: 1	value: 980	status: 1
+i: 2	value: 992	status: 1
+i: 3	value: 864	status: 0
+i: 4	value: 866	status: 0
+
+---a---
+i: 1	value: 890	status: 1
+i: 2	value: 1	status: -1
+i: 3	value: 141	status: -1
+i: 4	value: 404	status: -1
+i: 5	value: 598	status: -1
+i: 6	value: 804	status: -1
+
+---b---
+i: 1	value: 924	status: 1
+i: 2	value: 980	status: 1
+i: 3	value: 992	status: 1
+i: 4	value: 864	status: 0
+i: 5	value: 866	status: 0
+
+---a---
+i: 1	value: 1	status: -1
+i: 2	value: 141	status: -1
+i: 3	value: 404	srb
+pa
+pa
+pa
+rb
+rb
+rb
+pa
+ra
+pa
+ra
+pa
+ra
+tatus: -1
+i: 4	value: 598	status: -1
+i: 5	value: 804	status: -1
+
+---b---
+i: 1	value: 890	status: 1
+i: 2	value: 924	status: 1
+i: 3	value: 980	status: 1
+i: 4	value: 992	status: 1
+i: 5	value: 864	status: 0
+i: 6	value: 866	status: 0
+
+---a---
+i: 1	value: 1	status: -1
+i: 2	value: 141	status: -1
+i: 3	value: 404	status: -1
+i: 4	value: 598	status: -1
+i: 5	value: 804	status: -1
+
+---b---
+i: 1	value: 924	status: 1
+i: 2	value: 980	status: 1
+i: 3	value: 992	status: 1
+i: 4	value: 864	status: 0
+i: 5	value: 866	status: 0
+i: 6	value: 890	status: 1
+
+---a---
+i: 1	value: 924	status: 2
+i: 2	value: 1	status: -1
+i: 3	value: 141	status: -1
+i: 4	value: 404	status: -1
+i: 5	value: 598	status: -1
+i: 6	value: 804	status: -1
+
+---b---
+i: 1	value: 980	status: 1
+i: 2	value: 992	status: 1
+i: 3	value: 864	status: 0
+i: 4	value: 866	status: 0
+i: 5	value: 890	status: 1
+
+---a---
+i: 1	value: 980	status: 2
+i: 2	value: 924	status: 2
+i: 3	value: 1	status: -1
+i: 4	value: 141	status: -1
+i: 5	value: 404	status: -1
+i: 6	value: 598	status: -1
+i: 7	value: 804	status: -1
+
+---b---
+i: 1	value: 992	status: 1
+i: 2	value: 864	status: 0
+i: 3	value: 866	status: 0
+i: 4	value: 890	status: 1
+
+---a---
+i: 1	value: 992	status: 2
+i: 2	value: 980	status: 2
+i: 3	value: 924	status: 2
+i: 4	value: 1	status: -1
+i: 5	value: 141	status: -1
+i: 6	value: 404	status: -1
+i: 7	value: 598	status: -1
+i: 8	value: 804	status: -1
+
+---b---
+i: 1	value: 864	status: 0
+i: 2	value: 866	status: 0
+i: 3	value: 890	status: 1
+
+---a---
+i: 1	value: 992	status: 2
+i: 2	value: 980	status: 2
+i: 3	value: 924	status: 2
+i: 4	value: 1	status: -1
+i: 5	value: 141	status: -1
+i: 6	value: 404	status: -1
+i: 7	value: 598	status: -1
+i: 8	value: 804	status: -1
+
+---b---
+i: 1	value: 866	status: 0
+i: 2	value: 890	status: 1
+i: 3	value: 864	status: 0
+
+---a---
+i: 1	value: 992	status: 2
+i: 2	value: 980	status: 2
+i: 3	value: 924	status: 2
+i: 4	value: 1	status: -1
+i: 5	value: 141	status: -1
+i: 6	value: 404	status: -1
+i: 7	value: 598	status: -1
+i: 8	value: 804	status: -1
+
+---b---
+i: 1	value: 890	status: 1
+i: 2	value: 864	status: 0
+i: 3	value: 866	status: 0
+
+---a---
+i: 1	value: 992	status: 2
+i: 2	value: 980	status: 2
+i: 3	value: 924	status: 2
+i: 4	value: 1	status: -1
+i: 5	value: 141	status: -1
+i: 6	value: 404	status: -1
+i: 7	value: 598	status: -1
+i: 8	value: 804	status: -1
+
+---b---
+i: 1	value: 864	status: 0
+i: 2	value: 866	status: 0
+i: 3	value: 890	status: 1
+
+---a---
+i: 1	value: 864	status: -1
+i: 2	value: 992	status: 2
+i: 3	value: 980	status: 2
+i: 4	value: 924	status: 2
+i: 5	value: 1	status: -1
+i: 6	value: 141	status: -1
+i: 7	value: 404	status: -1
+i: 8	value: 598	status: -1
+i: 9	value: 804	status: -1
+
+---b---
+i: 1	value: 866	status: 0
+i: 2	value: 890	status: 1
+
+---a---
+i: 1	value: 992	status: 2
+i: 2	value: 980	status: 2
+i: 3	value: 924	status: 2
+i: 4	value: 1	status: -1
+i: 5	value: 141	status: -1
+i: 6	value: 404	status: -1
+i: 7	value: 598	status: -1
+i: 8	value: 804	status: -1
+i: 9	value: 864	status: -1
+
+---b---
+i: 1	value: 866	status: 0
+i: 2	value: 890	status: 1
+
+---a---
+i: 1	value: 866	status: -1
+i: 2	value: 992	status: 2
+i: 3	value: 980	status: 2
+i: 4	value: 924	status: 2
+i: 5	value: 1	status: -1
+i: 6	value: 141	status: -1
+i: 7	value: 404	status: -1
+i: 8	value: 598	status: -1
+i: 9	value: 804	status: -1
+i: 10	value: 864	status: -1
+
+---b---
+i: 1	value: 890	status: 1
+
+---a---
+i: 1	value: 992	status: 2
+i: 2	value: 980	status: 2
+i: 3	value: 924	status: 2
+i: 4	value: 1	status: -1
+i: 5	value: 141	status: -1
+i: 6	value: 404	status: -1
+i: 7	value: 598	status: -1
+i: 8	value: 804	status: -1
+i: 9	value: 864	status: -1
+i: 10	value: 866	status: -1
+
+---b---
+i: 1	value: 890	status: 1
+
+---a---
+i: 1	value: 890	status: -1
+i: 2	value: 992	status: 2
+i: 3	value: 980	status: 2
+i: 4	value: 924	status: 2
+i: 5	value: 1	status: -1
+i: 6	value: 141	status: -1
+i: 7	value: 404	status: -1
+i: 8	value: 598	status: -1
+i: 9	value: 804	status: -1
+i: 10	value: 864	status: -1
+i: 11	value: 866	status: -1
+
+---b---
+(null)
+
+---a---
+i: 1	value: 992	status: 2
+i: 2	value: 980	status: 2
+i: 3	value: 924	status: 2
+i: 4	value: 1	status: -1
+i: 5	value: 141	status: -1
+i: 6	value: 404	status: pb
+pb
+pb

@@ -25,17 +25,23 @@ bool	is_sorted(t_dclist **stack_a, t_dclist **stack_b, t_data *data_a)
 
 bool bis_sorted(t_dclist **stack_b, t_data *data_b)
 {
-	int	i;
-	int	tmp;
+	int		i;
+	int		tmp;
+	t_dclist *p;
 
 	i = 0;
+	p = (*stack_b);
 	tmp = (*stack_b)->value;
 	while (i < data_b->len)
 	{
 		if (tmp > (*stack_b)->value)
+		{
+			(*stack_b) = p;
 			return (false);
+		}
 		tmp = (*stack_b)->value;
 		(*stack_b) = (*stack_b)->next;
+		i++;
 	}
 	return (true);
 }

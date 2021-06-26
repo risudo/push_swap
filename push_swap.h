@@ -26,6 +26,7 @@ typedef struct s_data
 	int	min_place;
 	int	sorted_len;
 	int	max_c_num;
+	int	min_c_num;
 }	t_data;
 
 typedef struct s_tdata

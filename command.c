@@ -63,27 +63,27 @@ void	reverse_rotate(t_dclist **stack)
 void	put_command(int command)
 {
 	if (command == SA)
-		write(1, "SA\n", 3);
+		write(1, "sa\n", 3);
 	if (command == SB)
-		write(1, "SB\n", 3);
+		write(1, "sb\n", 3);
 	if (command == SS)
-		write(1, "SS\n", 3);
+		write(1, "ss\n", 3);
 	if (command == PA)
-		write(1, "PA\n", 3);
+		write(1, "pa\n", 3);
 	if (command == PB)
-		write(1, "PB\n", 3);
+		write(1, "pb\n", 3);
 	if (command == RA)
-		write(1, "RA\n", 3);
+		write(1, "ra\n", 3);
 	if (command == RB)
-		write(1, "RB\n", 3);
+		write(1, "rb\n", 3);
 	if (command == RR)
-		write(1, "RR\n", 3);
+		write(1, "rr\n", 3);
 	if (command == RRA)
-		write(1, "RRA\n", 4);
+		write(1, "rra\n", 4);
 	if (command == RRB)
-		write(1, "RRB\n", 4);
+		write(1, "rrb\n", 4);
 	if (command == RRR)
-		write(1, "RRR\n", 4);
+		write(1, "rrr\n", 4);
 }
 
 void	command(int command, t_dclist **stack_a, t_dclist **stack_b)
