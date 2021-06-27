@@ -31,14 +31,15 @@ void	push_swap(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 	if (is_sorted(stack_a, stack_b, data->data_a))
 		return ;
 	else if (data->data_a->len == 2)
-		command(SA, stack_a, stack_b);
+		command(SA, stack_a, stack_b, data);
 	else if (data->data_a->len == 3)
-		sort_three_arg(stack_a, stack_b, data->data_a);
+		sort_three_arg(stack_a, stack_b, data);
 	else if (data->data_a->len <= 5)
-		sort_five_arg(stack_a, stack_b, data->data_a);
+		sort_five_arg(stack_a, stack_b, data);
 	else
 		split_stack(stack_a, stack_b, data);
 	push_both_data(stack_a, stack_b, data);
+
 	return ;
 }
 
@@ -58,11 +59,7 @@ int	main(int argc, char **argv)
 		put_error();
 	init_stack_a(&stack_a, stack_data.data_a, argc, argv);
 	push_swap(&stack_a, &stack_b, &stack_data);
-	// command(PB, &stack_a, &stack_b);
-	// command(PB, &stack_a, &stack_b);
-	// command(PB, &stack_a, &stack_b);
-	// command(SB, &stack_a, &stack_b);
-	// command(SB, &stack_a, &stack_b);
+	// put_cmd_list(&stack_data);
 	// put_stack(stack_a, stack_b);
 	return (0);
 }

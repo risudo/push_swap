@@ -71,3 +71,17 @@ void	put_data(t_data *data)
 		printf("min_place: LATTER\n");
 	printf("sorted_len: %d\n", data->sorted_len);
 }
+
+void	put_cmd_list(t_tdata *data)
+{
+	t_list	*cmdlist;
+
+	cmdlist = data->cmd_list;
+	printf("---command list---\n");
+	while (cmdlist->next != NULL)
+	{
+		put_command(cmdlist->cmd);
+		cmdlist = cmdlist->next;
+	}
+	put_command(cmdlist->cmd);
+}

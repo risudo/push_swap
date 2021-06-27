@@ -14,6 +14,7 @@ SRCS	=	main.c \
 			sort_three_five.c \
 			sortb_ascending.c \
 			command.c \
+			cmd_list.c \
 			debug.c
 
 OBJS	=	${SRCS:.c=.o}

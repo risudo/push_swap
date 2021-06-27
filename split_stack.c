@@ -1,18 +1,18 @@
 #include "push_swap.h"
 
-void	pb_less_ave(t_dclist **stack_a, t_dclist **stack_b, t_data *data_a)
+void	pb_less_ave(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 {
 	int	i;
 	int	pivot;
 
 	i = 0;
-	pivot = data_a->len / 2;
-	while (i < data_a->len)
+	pivot = data->data_a->len / 2;
+	while (i < data->data_a->len)
 	{
 		if ((*stack_a)->c_num <= pivot)
-			command(PB, stack_a, stack_b);
+			command(PB, stack_a, stack_b, data);
 		else
-			command(RA, stack_a, stack_b);
+			command(RA, stack_a, stack_b, data);
 		i++;
 	}
 }
@@ -21,12 +21,12 @@ void	split_stack(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 {
 	if (is_sorted(stack_a, stack_b, data->data_a))
 		return ;
-	pb_less_ave(stack_a, stack_b, data->data_a);
+	pb_less_ave(stack_a, stack_b, data);
 	push_both_data(stack_a, stack_b, data);
 	if (data->data_a->len <= 5 && data->data_b->len <= 5)
 	{
 		push_swap(stack_a, stack_b, data);
-		sortb_ascending(stack_a, stack_b, data->data_b);
+		sortb_ascending(stack_a, stack_b, data);
 		return ;
 	}
 	// else if (data->data_b->len <= 5)

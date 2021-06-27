@@ -86,12 +86,4 @@ void	numbering_list(t_dclist **stack_a, t_data *data_a)
 		min_cmp = next_min;
 		i++;
 	}
-	// i = 0;
-	// while (i < data_a->len)
-	// {
-	// 	printf("c_num: %d\n", (*stack_a)->c_num);
-	// 	(*stack_a) = (*stack_a)->next;
-	// 	i++;
-	// }
-	// exit(0);
 }

@@ -86,7 +86,7 @@ void	put_command(int command)
 		write(1, "rrr\n", 4);
 }
 
-void	command(int command, t_dclist **stack_a, t_dclist **stack_b)
+void	command(int command, t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 {
 	void	(*f[NUM])(t_dclist **stack);
 	t_dclist	**stack;
@@ -108,5 +108,6 @@ void	command(int command, t_dclist **stack_a, t_dclist **stack_b)
 	if (command == PB)
 		push(stack_a, stack_b);
 	put_command(command);
+	ft_cmd_lstadd_back(command, data);
 	// put_stack(*stack_a, *stack_b);
 }
