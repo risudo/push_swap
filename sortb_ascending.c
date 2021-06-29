@@ -16,23 +16,23 @@ void	sortb_ascending(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 
 void	sortb_ascending_three(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 {
-	if ((*stack_b)->next->next->value == data->data_b->max
-		&& (*stack_b)->next->value == data->data_b->min)
+	if ((*stack_b)->next->next->c_num == data->data_b->max_c_num
+		&& (*stack_b)->next->c_num == data->data_b->min_c_num)
 		command(RRB, stack_a, stack_b, data);
-	else if ((*stack_b)->value == data->data_b->max
-		&& (*stack_b)->next->value == data->data_b->min)
+	else if ((*stack_b)->c_num == data->data_b->max_c_num
+		&& (*stack_b)->next->c_num == data->data_b->min_c_num)
 	{
 		command(SB, stack_a, stack_b, data);
 		command(RB, stack_a, stack_b, data);
 	}
-	else if ((*stack_b)->next->next->value == data->data_b->min
-		&& (*stack_b)->next->value == data->data_b->max)
+	else if ((*stack_b)->next->next->c_num == data->data_b->min_c_num
+		&& (*stack_b)->next->c_num == data->data_b->max_c_num)
 		command(SB, stack_a, stack_b, data);
-	else if ((*stack_b)->value == data->data_b->min
-		&& (*stack_b)->next->value == data->data_b->max)
+	else if ((*stack_b)->c_num == data->data_b->min_c_num
+		&& (*stack_b)->next->c_num == data->data_b->max_c_num)
 		command(RB, stack_a, stack_b, data);
-	else if ((*stack_b)->value == data->data_b->min
-		&& (*stack_b)->next->next->value == data->data_b->max)
+	else if ((*stack_b)->c_num == data->data_b->min_c_num
+		&& (*stack_b)->next->next->c_num == data->data_b->max_c_num)
 	{
 		command(SB, stack_a, stack_b, data);
 		command(RRB, stack_a, stack_b, data);

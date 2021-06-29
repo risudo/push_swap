@@ -77,7 +77,7 @@ void	put_cmd_list(t_tdata *data)
 	t_list	*cmdlist;
 
 	cmdlist = data->cmd_list;
-	printf("---command list---\n");
+	// printf("---command list---\n");
 	while (cmdlist->next != NULL)
 	{
 		put_command(cmdlist->cmd);

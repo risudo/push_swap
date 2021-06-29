@@ -1,0 +1,19 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/sudourio/Desktop/42tokyo/rank02/push_swap'
+gcc -Wall -Wextra -Werror -c main.c -o main.o
+gcc -Wall -Wextra -Werror -c ft_atoi.c -o ft_atoi.o
+gcc -Wall -Wextra -Werror -c init_stack.c -o init_stack.o
+gcc -Wall -Wextra -Werror -c sort_utils.c -o sort_utils.o
+gcc -Wall -Wextra -Werror -c split_stack.c -o split_stack.o
+gcc -Wall -Wextra -Werror -c push_data.c -o push_data.o
+ 
+gcc -Wall -Wextra -Werror -c quick_sort.c -o quick_sort.o
+gcc -Wall -Wextra -Werror -c sort_three_five.c -o sort_three_five.o
+gcc -Wall -Wextra -Werror -c sortb_ascending.c -o sortb_ascending.o
+gcc -Wall -Wextra -Werror -c command.c -o command.o
+gcc -Wall -Wextra -Werror -c cmd_list.c -o cmd_list.o
+gcc -Wall -Wextra -Werror -c optimize_cmdlist.c -o optimize_cmdlist.o
+gcc -Wall -Wextra -Werror -c debug.c -o debug.o
+gcc -Wall -Wextra -Werror main.o ft_atoi.o init_stack.o sort_utils.o split_stack.o push_data.o quick_sort.o sort_three_five.o sortb_ascending.o command.o cmd_list.o optimize_cmdlist.o debug.o -o push_swap
+make: Leaving directory `/Users/sudourio/Desktop/42tokyo/rank02/push_swap'
+ 

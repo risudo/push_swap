@@ -107,7 +107,7 @@ void	command(int command, t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 		push(stack_b, stack_a);
 	if (command == PB)
 		push(stack_a, stack_b);
-	put_command(command);
+	// put_command(command);
 	ft_cmd_lstadd_back(command, data);
 	// put_stack(*stack_a, *stack_b);
 }

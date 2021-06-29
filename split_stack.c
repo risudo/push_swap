@@ -9,12 +9,21 @@ void	pb_less_ave(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 	pivot = data->data_a->len / 2;
 	while (i < data->data_a->len)
 	{
-		if ((*stack_a)->c_num <= pivot)
+		if ((*stack_a)->c_num == 1)
+		{
+			(*stack_a)->status = SORTED;
+			command(PB, stack_a, stack_b, data);
+			command(RB, stack_a, stack_b, data);
+		}
+		else if ((*stack_a)->c_num <= pivot)
 			command(PB, stack_a, stack_b, data);
 		else
 			command(RA, stack_a, stack_b, data);
 		i++;
 	}
+	command(RRB, stack_a, stack_b, data);
+	command(PA, stack_a, stack_b, data);
+	command(RA, stack_a, stack_b, data);
 }
 //平均以下をPBして、AとB両方とも5個以下ならソートして連結
 void	split_stack(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
@@ -29,18 +38,7 @@ void	split_stack(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 		sortb_ascending(stack_a, stack_b, data);
 		return ;
 	}
-	// else if (data->data_b->len <= 5)
-	// {
-	// 	sort_11arg(stack_a, stack_b, data);
-	// 	return ;
-	// }
+	// push_min_ifpossible(stack_a, stack_b, data);
+	// exit(0);
 	quick_sort(stack_a, stack_b, data);
 }
-
-
-	// 		1. 平均以下をPB
-	// 		2. （スタックBが６個以上ならBの平均以上をPA）
-	// →→	3. スタックBが５個以下になったらソート
-
-	// ↑	4. PA->RA
-	// ↑←	5. 2でPAしたノードをPB

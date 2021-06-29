@@ -39,7 +39,6 @@ void	push_swap(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 	else
 		split_stack(stack_a, stack_b, data);
 	push_both_data(stack_a, stack_b, data);
-
 	return ;
 }
 
@@ -58,8 +57,11 @@ int	main(int argc, char **argv)
 	if (argc == 1)
 		put_error();
 	init_stack_a(&stack_a, stack_data.data_a, argc, argv);
-	push_swap(&stack_a, &stack_b, &stack_data);
+	push_swap(&stack_a, &stack_b, &stack_data)	;
+	optimize_cmdlist(&stack_data);
 	// put_cmd_list(&stack_data);
 	// put_stack(stack_a, stack_b);
 	return (0);
 }
+
+//TODO: listclea作る！

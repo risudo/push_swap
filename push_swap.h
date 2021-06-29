@@ -34,6 +34,7 @@ typedef struct s_data
 	int	sorted_len;
 	int	max_c_num;
 	int	min_c_num;
+	int	min_notsort;
 }	t_data;
 
 typedef struct s_tdata
@@ -120,9 +121,21 @@ int			get_pivot(t_dclist **stack, t_data *data);
 void	pb_less_pivot(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data);
 void	pa_less_pivot(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data);
 void	pb_same_status(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data);
+bool	push_min_ifpossible(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data);
+void	ft_exit_success(t_tdata *data);
+
+	int	min;
 // sort_ascending
 void		sortb_ascending(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data);
 void		sortb_ascending_three(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data);
+
+// optimize_cmdlist.c
+void	optimize_cmdlist(t_tdata *data);
+void	find_omit(t_list *cmd_list);
+bool	is_omit_rotate(int cmd1, int cmd2);
+void	omit_rotate(t_list *cmd_list);
+void	use_rr(t_list *cmd_list);
+bool	is_use_rr(int cmd1, int cmd2);
 
 // debug.c
 void		put_stack(t_dclist *stack_a, t_dclist *stack_b);
