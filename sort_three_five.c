@@ -49,8 +49,7 @@ void	sort_five_arg(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 
 	recursive_pb(stack_a, stack_b, data);
 	sort_three_arg(stack_a, stack_b, data);
-	// if (is_stack(stack_b))
-		status = (*stack_b)->status;
+	status = (*stack_b)->status;
 	while (is_stack(stack_b) && status == (*stack_b)->status)
 	{
 		command(PA, stack_a, stack_b, data);

@@ -108,6 +108,9 @@ void	command(int command, t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 	if (command == PB)
 		push(stack_a, stack_b);
 	// put_command(command);
-	ft_cmd_lstadd_back(command, data);
-	// put_stack(*stack_a, *stack_b);
+	if (!ft_cmd_lstadd_back(command, data))
+	{
+		ft_stackclear(stack_a, stack_b, data);
+		exit(1);
+	}
 }
