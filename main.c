@@ -28,6 +28,7 @@ void	put_error(void)
 
 void	push_swap(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 {
+	push_data(stack_a, data->data_a);
 	if (is_sorted(stack_a, stack_b, data->data_a))
 		return ;
 	else if (data->data_a->len == 2)
@@ -57,11 +58,12 @@ int	main(int argc, char **argv)
 	if (argc == 1)
 		put_error();
 	init_stack_a(&stack_a, stack_data.data_a, argc, argv);
-	push_swap(&stack_a, &stack_b, &stack_data)	;
+	push_swap(&stack_a, &stack_b, &stack_data);
 	optimize_cmdlist(&stack_data);
-	// put_cmd_list(&stack_data);
-	// put_stack(stack_a, stack_b);
+	// exit(0);
+	put_cmd_list(&stack_data);
+	// ft_stackclear(&stack_a, &stack_b, &stack_data);
+	cmd_clear(stack_data.cmd_list);
 	return (0);
 }
 
-//TODO: listclea作る！

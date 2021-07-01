@@ -2,30 +2,27 @@
 
 void	quick_sort(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 {
+	bool	push;
+
+	push = false;
 	if (is_sorted(stack_a, stack_b, data->data_a))
-	{
-		ft_exit_success(data);
 		return ;
-	}
 	while (data->data_b->len > 5)
 	{
-		if (push_min_ifpossible(stack_a, stack_b, data))
-			continue ;
-		pa_less_pivot(stack_a, stack_b, data);
+		push = pa_less_pivot(stack_a, stack_b, data);//PA or RB
 	}
-	while (push_min_ifpossible(stack_a, stack_b, data))
-		;
-	sortb_five(stack_a, stack_b, data);
-	pb_same_status(stack_a, stack_b, data);
+	if (!push && data->data_b->min_c_num == (*stack_a)->prev->c_num + 1)
+		sortb_five(stack_a, stack_b, data);
+	pb_same_status(stack_a, stack_b, data);//PB
 	push_both_data(stack_a, stack_b, data);
 	quick_sort(stack_a, stack_b, data);
 }
 
-void	ft_exit_success(t_tdata *data)
-{
-	optimize_cmdlist(data);
-	put_cmd_list(data);
-}
+// bool	is_next_min(t_dclist **stack_a, t_dclist *stack_b, t_tdata *data)
+// {
+// 	if (data->data_b->min_c_num == (*stack_a)->prev->c_num + 1)
+
+// }
 
 //Aの先頭、Bの先頭、Bの２番目、Bの後ろに最小があったらの後ろにPUSH
 bool	push_min_ifpossible(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
@@ -53,11 +50,10 @@ bool	push_min_ifpossible(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 	}
 	else if (is_stack(stack_b) && (*stack_b)->next->c_num == min)
 	{
-		command(RB, stack_a, stack_b, data);
+		command(SB, stack_a, stack_b, data);
 		(*stack_b)->status = SORTED;
 		command(PA, stack_a, stack_b, data);
 		command(RA, stack_a, stack_b, data);
-
 	}
 	else if (is_stack(stack_b) && (*stack_b)->prev->c_num == min)
 	{
@@ -66,6 +62,26 @@ bool	push_min_ifpossible(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 		(*stack_a)->status = SORTED;
 		command(RA, stack_a, stack_b, data);
 	}
+	else if (is_stack(stack_b) && (*stack_b)->prev->prev->c_num == min)
+	{
+		command(RRB, stack_a, stack_b, data);
+		command(RRB, stack_a, stack_b, data);
+		command(PA, stack_a, stack_b, data);
+		(*stack_a)->status = SORTED;
+		command(RA, stack_a, stack_b, data);
+	}
+	else if (is_stack(stack_b) && (*stack_b)->next != (*stack_b) && (*stack_b)->c_num == min + 1)
+	{
+		//１つじゃない時
+		command(RB, stack_a, stack_b, data);
+		return (false);
+	}
+	// else if (is_stack(stack_b) && (*stack_b)->next != (*stack_b) && (*stack_b)->next->c_num == min + 1)
+	// {
+	// 	command(RB, stack_a, stack_b, data);
+	// 	command(RB, stack_a, stack_b, data);
+	// 	return (false);
+	// }
 	else
 		return (false);
 	push_both_data(stack_a, stack_b, data);
@@ -85,39 +101,47 @@ void	pb_same_status(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 	{
 		if (push_min_ifpossible(stack_a, stack_b, data))
 			continue ;
+		(*stack_a)->status = 0;
 		command(PB, stack_a, stack_b, data);
 	}
 	while (push_min_ifpossible(stack_a, stack_b, data))
 		;
 }
 
-void	pa_less_pivot(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
+bool	pa_less_pivot(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 {
 	int	pivot;
 	int i;
 	int	cnt;
+	bool ret;
 
 	i = 0;
 	cnt = 0;
+	ret = false;
 		// printf("---pa_less_pivot---\n");
 	push_data(stack_b, data->data_b);
 	pivot = get_pivot(stack_b, data->data_b);
 	while (is_stack(stack_b) && i < data->data_b->len && cnt < pivot - data->data_b->min_c_num + 1)
 	{
-		// if (push_min_ifpossible(stack_a, stack_b, data))
-		// 	continue ;
 // !ここでやるとバグる
-		if ((*stack_b)->c_num > pivot)
+		while (push_min_ifpossible(stack_a, stack_b, data))
+		{
+			ret = true;
+			if (is_stack(stack_b))
+				pivot = get_pivot(stack_b, data->data_b);
+		}
+		if (is_stack(stack_b) && (*stack_b)->c_num > pivot)
 		{
 			cnt++;
 			(*stack_b)->status++;
 			command(PA, stack_a, stack_b, data);
 		}
-		else
+		else if (is_stack(stack_b) && ret == false)
 			command(RB, stack_a, stack_b, data);
 		i++;
 	}
-	push_data(stack_b, data->data_b);
+	push_both_data(stack_a, stack_b, data);
+	return (ret);
 }
 //Aの未ソートのpivot以下をPBする
 //TODO: SORTED以外で最小値を見つけたらRA
@@ -200,6 +224,7 @@ void	sortb_five(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 	int	cmd;
 
 		// printf("---sortb_five---\n");//
+		// write(1, "debug\n", 6);
 	if (!is_stack(stack_b))
 		return ;
 	push_data(stack_b, data->data_b);
@@ -218,7 +243,7 @@ void	sortb_five(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 	}
 	if (!bis_sorted(stack_b, data->data_b))
 		sortb_three(stack_a, stack_b, data);
-	while (is_stack(stack_b))
+	while (is_stack(stack_b) && (*stack_b)->c_num == (*stack_a)->prev->c_num + 1)
 	{
 		(*stack_b)->status = SORTED;
 		command(PA, stack_a, stack_b, data);

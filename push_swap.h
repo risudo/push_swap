@@ -119,12 +119,11 @@ void		pa_ra_sortedb(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data);
 void		sort_11arg(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data);
 int			get_pivot(t_dclist **stack, t_data *data);
 void	pb_less_pivot(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data);
-void	pa_less_pivot(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data);
+bool	pa_less_pivot(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data);
 void	pb_same_status(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data);
 bool	push_min_ifpossible(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data);
 void	ft_exit_success(t_tdata *data);
 
-	int	min;
 // sort_ascending
 void		sortb_ascending(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data);
 void		sortb_ascending_three(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data);
@@ -132,10 +131,15 @@ void		sortb_ascending_three(t_dclist **stack_a, t_dclist **stack_b, t_tdata *dat
 // optimize_cmdlist.c
 void	optimize_cmdlist(t_tdata *data);
 void	find_omit(t_list *cmd_list);
-bool	is_omit_rotate(int cmd1, int cmd2);
-void	omit_rotate(t_list *cmd_list);
+bool	is_omit_2cmd(int cmd1, int cmd2);
+void	omit_2cmd(t_list *cmd_list);
 void	use_rr(t_list *cmd_list);
 bool	is_use_rr(int cmd1, int cmd2);
+void	find_omit_rotate(t_list *cmd_list);
+
+// list_utils.c
+void	ft_stackclear(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data);
+void	cmd_clear(t_list *cmd_list);
 
 // debug.c
 void		put_stack(t_dclist *stack_a, t_dclist *stack_b);

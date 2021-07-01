@@ -2,6 +2,7 @@
 
 void	sortb_ascending(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 {
+	exit(0);
 	while (data->data_b->len != 3)
 	{
 		while ((*stack_b)->value != data->data_b->max)

@@ -16,6 +16,7 @@ SRCS	=	main.c \
 			command.c \
 			cmd_list.c \
 			optimize_cmdlist.c \
+			list_utils.c \
 			debug.c
 
 OBJS	=	${SRCS:.c=.o}
