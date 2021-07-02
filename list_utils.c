@@ -3,7 +3,7 @@
 void	ft_stackclear(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 {
 	t_dclist	*tmp;
-	int	i;
+	int			i;
 
 	i = 0;
 	while (i < data->data_a->len)

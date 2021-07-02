@@ -128,8 +128,8 @@ void		split_stack(t_dclist **stack_a,
 				t_dclist **stack_b, t_tdata *data);
 void		sortb_less_five(t_dclist **stack_a,
 				t_dclist **stack_b, t_tdata *data);
-void		sortb_five(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data);
-void		sortb_three(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data);
+// void		sortb_five(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data);
+// void		sortb_three(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data);
 
 // quick_sort.c
 void		quick_sort(t_dclist **stack_a,
@@ -141,21 +141,22 @@ void		pb_same_status(t_dclist **stack_a,
 				t_dclist **stack_b, t_tdata *data);
 bool		push_min_ifpossible(t_dclist **stack_a,
 				t_dclist **stack_b, t_tdata *data);
+bool	is_large_num(t_dclist **stack_b, t_data *data_b, int pivot);
 
 // sort_ascending
-void		sortb_ascending(t_dclist **stack_a,
-				t_dclist **stack_b, t_tdata *data);
-void		sortb_ascending_three(t_dclist **stack_a,
-				t_dclist **stack_b, t_tdata *data);
+// void		sortb_ascending(t_dclist **stack_a,
+// 				t_dclist **stack_b, t_tdata *data);
+// void		sortb_ascending_three(t_dclist **stack_a,
+// 				t_dclist **stack_b, t_tdata *data);
 
 // optimize_cmdlist.c
 void		optimize_cmdlist(t_tdata *data);
-void		find_omit(t_list *cmd_list);
+void		find_rr(t_list *cmd_list);
 t_list		*is_omit_2cmd(int cmd1, t_list *cmd_list);
 void		omit_2cmd(t_list *cmd_list);
 void		use_rr(t_list *cmd_list);
 bool		is_use_rr(int cmd1, int cmd2);
-void		find_omit_rotate(t_list *cmd_list);
+void		find_omit_2cmd(t_list *cmd_list);
 void		find_sa_ra_pb(t_list *cmd_list);
 
 // list_utils.c

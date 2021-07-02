@@ -45,6 +45,9 @@ void	pb_less_ave(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 			command(RA, stack_a, stack_b, data);
 	}
 	first_sort(stack_a, stack_b, data);
+	while (push_min_ifpossible(stack_a, stack_b, data))
+		;
+	push_both_data(stack_a, stack_b, data);
 	// command(RRB, stack_a, stack_b, data);
 	// command(RRB, stack_a, stack_b, data);
 	// if ((*stack_b)->c_num > (*stack_b)->next->c_num)

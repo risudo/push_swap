@@ -2,9 +2,8 @@
 
 void	optimize_cmdlist(t_tdata *data)
 {
-	// omit_pa_pb(data->cmd_list);
-	find_omit_rotate(data->cmd_list);
-	find_omit(data->cmd_list);//ra->rra
+	find_omit_2cmd(data->cmd_list);
+	find_rr(data->cmd_list);
 	find_sa_ra_pb(data->cmd_list);
 }
 
@@ -24,7 +23,7 @@ void	find_sa_ra_pb(t_list *cmd_list)
 	}
 }
 
-void	find_omit_rotate(t_list *cmd_list)
+void	find_omit_2cmd(t_list *cmd_list)
 {
 	t_list	*p;
 
@@ -61,7 +60,7 @@ t_list	*is_omit_2cmd(int cmd1, t_list *cmd_list)
 		return (NULL);
 }
 
-void	find_omit(t_list *cmd_list)
+void	find_rr(t_list *cmd_list)
 {
 	t_list	*start;
 
@@ -77,12 +76,6 @@ void	find_omit(t_list *cmd_list)
 			cmd_list = cmd_list->next;
 	}
 }
-
-// void	use_rr(t_list *cmd_list)
-// {
-// 	cmd_list->cmd = RR;
-// 	cmd_list->next->cmd = -1;
-// }
 
 bool	is_use_rr(int cmd1, int cmd2)
 {

@@ -51,8 +51,6 @@ int	main(int argc, char **argv)
 	t_data		data_b;
 	t_tdata		stack_data;
 
-	// stack_a = NULL;
-	// stack_b = NULL;
 	stack_data.data_a = &data_a;
 	stack_data.data_b = &data_b;
 	if (argc == 1)
