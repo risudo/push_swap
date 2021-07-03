@@ -11,15 +11,15 @@ SRCS	=	main.c \
 			split_stack.c \
 			push_data.c \
 			quick_sort.c \
-			sort_three_five.c \
-			sortb_ascending.c \
+			sort_less_five.c \
 			command.c \
 			cmd_list.c \
 			optimize_cmdlist.c \
 			list_utils.c \
 			cmd_utils.c \
 			cmd_utils2.c \
-			debug.c
+			duplicates_error.c \
+#			debug.c
 
 OBJS	=	${SRCS:.c=.o}
 

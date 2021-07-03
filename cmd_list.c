@@ -32,7 +32,7 @@ t_list	*ft_cmd_lstnew(int command)
 
 	new = (t_list *)malloc(sizeof(t_list));
 	if (!new)
-		return(NULL);
+		return (NULL);
 	new->cmd = command;
 	new->prev = NULL;
 	new->next = NULL;

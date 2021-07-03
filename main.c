@@ -1,8 +1,5 @@
 #include "push_swap.h"
 
-//not integers, bigger than an integer, duplicates
-//TODO:被りエラーチェック
-
 void	ft_lstadd_front(t_dclist **list, t_dclist *new)
 {
 	t_dclist	*p;
@@ -40,7 +37,6 @@ void	push_swap(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 	else
 		split_stack(stack_a, stack_b, data);
 	push_both_data(stack_a, stack_b, data);
-	return ;
 }
 
 int	main(int argc, char **argv)
@@ -53,14 +49,12 @@ int	main(int argc, char **argv)
 
 	stack_data.data_a = &data_a;
 	stack_data.data_b = &data_b;
-	if (argc == 1)
-		put_error();
 	init_stack_a(&stack_a, stack_data.data_a, argc, argv);
 	push_swap(&stack_a, &stack_b, &stack_data);
+	duplicates_error(&stack_a, stack_data.data_a);
 	optimize_cmdlist(&stack_data);
 	put_cmd_list(&stack_data);
 	ft_stackclear(&stack_a, &stack_b, &stack_data);
 	cmd_clear(stack_data.cmd_list);
 	return (0);
 }
-//? 引数１の時は何も表示しないが正解？

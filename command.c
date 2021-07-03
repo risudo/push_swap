@@ -86,9 +86,10 @@ void	put_command(int command)
 		write(1, "rrr\n", 4);
 }
 
-void	command(int command, t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
+void	command(int command, t_dclist **stack_a,
+			 t_dclist **stack_b, t_tdata *data)
 {
-	void	(*f[NUM])(t_dclist **stack);
+	void		(*f[NUM])(t_dclist **stack);
 	t_dclist	**stack;
 
 	f[SA] = swap;
@@ -110,6 +111,22 @@ void	command(int command, t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 	if (!ft_cmd_lstadd_back(command, data))
 	{
 		ft_stackclear(stack_a, stack_b, data);
+		cmd_clear(data->cmd_list);
 		exit(1);
 	}
+}
+
+void	put_cmd_list(t_tdata *data)
+{
+	t_list	*cmdlist;
+
+	if (!data->cmd_list)
+		return ;
+	cmdlist = data->cmd_list;
+	while (cmdlist->next != NULL)
+	{
+		put_command(cmdlist->cmd);
+		cmdlist = cmdlist->next;
+	}
+	put_command(cmdlist->cmd);
 }

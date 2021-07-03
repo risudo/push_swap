@@ -33,7 +33,8 @@ void	pb_less_ave(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 	pivot = data->data_a->len / 2 + 1;
 	while (++i < data->data_a->len)
 	{
-		if ((*stack_a)->c_num == 1 || (*stack_a)->c_num == 2 || (*stack_a)->c_num == 3)
+		if ((*stack_a)->c_num == 1 || (*stack_a)->c_num == 2
+			|| (*stack_a)->c_num == 3)
 		{
 			command(PB, stack_a, stack_b, data);
 			if ((*stack_b)->next != (*stack_b))
@@ -47,15 +48,7 @@ void	pb_less_ave(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 	first_sort(stack_a, stack_b, data);
 	while (push_min_ifpossible(stack_a, stack_b, data))
 		;
-	push_both_data(stack_a, stack_b, data);
-	// command(RRB, stack_a, stack_b, data);
-	// command(RRB, stack_a, stack_b, data);
-	// if ((*stack_b)->c_num > (*stack_b)->next->c_num)
-	// 	command(SB, stack_a, stack_b, data);
-	// pa_ra(stack_a, stack_b, data);
-	// pa_ra(stack_a, stack_b, data);
 }
-
 
 void	split_stack(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 {
@@ -63,12 +56,5 @@ void	split_stack(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 		return ;
 	pb_less_ave(stack_a, stack_b, data);
 	push_both_data(stack_a, stack_b, data);
-	// if (data->data_a->len <= 5 && data->data_b->len <= 5)
-	// {
-	// 	push_swap(stack_a, stack_b, data);
-	// 		exit(0);
-	// 	sortb_ascending(stack_a, stack_b, data);
-	// 	return ;
-	// }
 	quick_sort(stack_a, stack_b, data);
 }

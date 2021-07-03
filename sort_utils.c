@@ -53,3 +53,14 @@ bool	is_stack(t_dclist **stack)
 	else
 		return (false);
 }
+
+int	get_pivot(t_dclist **stack, t_data *data)
+{
+	int	min;
+
+	if ((*stack)->prev->status == SORTED)
+		min = (*stack)->prev->c_num + 1;
+	else
+		min = data->min_c_num;
+	return ((data->max_c_num + min) / 2);
+}

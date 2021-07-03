@@ -2,6 +2,8 @@
 
 void	optimize_cmdlist(t_tdata *data)
 {
+	if (!data->cmd_list)
+		return ;
 	find_omit_2cmd(data->cmd_list);
 	find_rr(data->cmd_list);
 	find_sa_ra_pb(data->cmd_list);
@@ -67,7 +69,8 @@ void	find_rr(t_list *cmd_list)
 	start = cmd_list;
 	while (cmd_list->next != NULL)
 	{
-		if (is_use_rr(cmd_list->cmd, cmd_list->next->cmd))
+		if ((cmd_list->cmd == RA && cmd_list->next->cmd == RB)
+			|| (cmd_list->cmd == RB && cmd_list->next->cmd == RA))
 		{
 			cmd_list->cmd = RR;
 			cmd_list->next->cmd = -1;
@@ -75,12 +78,4 @@ void	find_rr(t_list *cmd_list)
 		else
 			cmd_list = cmd_list->next;
 	}
-}
-
-bool	is_use_rr(int cmd1, int cmd2)
-{
-	if ((cmd1 == RA && cmd2 == RB) || (cmd1 == RB && cmd2 == RA))
-		return (true);
-	else
-		return (false);
 }

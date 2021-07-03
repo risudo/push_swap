@@ -11,7 +11,10 @@ void	init_stack_a(t_dclist **stack_a, t_data *data_a, int argc, char **argv)
 	{
 		p_value = ft_atoi(argv[i]);
 		if (!p_value)
+		{
+
 			put_error();
+		}
 		tmp = ft_lstnew(*p_value);
 		ft_lstadd_back(stack_a, tmp);
 		i++;
