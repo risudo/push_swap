@@ -49,12 +49,16 @@ int	main(int argc, char **argv)
 
 	stack_data.data_a = &data_a;
 	stack_data.data_b = &data_b;
-	init_stack_a(&stack_a, stack_data.data_a, argc, argv);
+	if (!init_stack_a(&stack_a, stack_data.data_a, argc, argv))
+	{
+		stackclear(&stack_a, &stack_b, &stack_data);
+		put_error();
+	}
 	push_swap(&stack_a, &stack_b, &stack_data);
 	duplicates_error(&stack_a, stack_data.data_a);
 	optimize_cmdlist(&stack_data);
 	put_cmd_list(&stack_data);
-	ft_stackclear(&stack_a, &stack_b, &stack_data);
+	stackclear(&stack_a, &stack_b, &stack_data);
 	cmd_clear(stack_data.cmd_list);
 	return (0);
 }

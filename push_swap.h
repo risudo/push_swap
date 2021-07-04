@@ -13,7 +13,7 @@ typedef struct s_dclist
 {
 	int				value;
 	int				status;
-	int				c_num;
+	int				order;
 	struct s_dclist	*prev;
 	struct s_dclist	*next;
 }	t_dclist;
@@ -76,7 +76,7 @@ void		push_both_data(t_dclist **stack_a,
 				t_dclist **stack_b, t_tdata *data);
 
 // init_stack.c
-void		init_stack_a(t_dclist **stack_a, t_data *data_a,
+bool		init_stack_a(t_dclist **stack_a, t_data *data_a,
 				 int argc, char **argv);
 t_dclist	*ft_lstnew(int value);
 t_dclist	*ft_lstlast(t_dclist *list);
@@ -91,6 +91,11 @@ void		swap(t_dclist **stack);
 void		push(t_dclist **stack_a, t_dclist **stack_b);
 void		rotate(t_dclist **stack);
 void		reverse_rotate(t_dclist **stack);
+
+// put_command.c
+void	put_command(int command);
+void	put_cmd_list(t_tdata *data);
+
 
 // cmd_utils.c
 void		pa_ra(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data);
@@ -150,11 +155,10 @@ void		find_omit_2cmd(t_list *cmd_list);
 void		find_sa_ra_pb(t_list *cmd_list);
 
 // list_utils.c
-void		ft_stackclear(t_dclist **stack_a,
+void		stackclear(t_dclist **stack_a,
 				t_dclist **stack_b, t_tdata *data);
 void		cmd_clear(t_list *cmd_list);
-
-void	duplicates_error(t_dclist **stack_a, t_data *data_a);
+void		duplicates_error(t_dclist **stack_a, t_data *data_a);
 
 // debug.c
 void		put_stack(t_dclist *stack_a, t_dclist *stack_b);

@@ -1,12 +1,12 @@
 #include "push_swap.h"
 
-void	ft_stackclear(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
+void	stackclear(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 {
 	t_dclist	*tmp;
 	int			i;
 
 	i = 0;
-	while (i < data->data_a->len)
+	while (is_stack(stack_a) && i < data->data_a->len)
 	{
 		tmp = *stack_a;
 		(*stack_a) = (*stack_a)->next;

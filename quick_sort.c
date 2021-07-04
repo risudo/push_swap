@@ -4,8 +4,7 @@ void	quick_sort(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 {
 	if (is_sorted(stack_a, stack_b, data->data_a))
 		return ;
-	while (data->data_b->len > 5
-		&& data->data_b->min_c_num == (*stack_a)->prev->c_num + 1)
+	while (data->data_b->min_c_num == (*stack_a)->prev->order + 1)
 		pa_more_pivot(stack_a, stack_b, data);
 	pb_same_status(stack_a, stack_b, data);
 	push_both_data(stack_a, stack_b, data);
@@ -17,20 +16,20 @@ bool	push_min_ifpossible(t_dclist **stack_a,
 {
 	int	min;
 
-	min = (*stack_a)->prev->c_num + 1;
-	if ((*stack_a)->c_num == min)
+	min = (*stack_a)->prev->order + 1;
+	if ((*stack_a)->order == min)
 		ra(stack_a, stack_b, data);
-	else if ((*stack_a)->next->c_num == min)
+	else if ((*stack_a)->next->order == min)
 		sa_ra(stack_a, stack_b, data);
-	else if (is_stack(stack_b) && (*stack_b)->c_num == min)
+	else if (is_stack(stack_b) && (*stack_b)->order == min)
 		pa_ra(stack_a, stack_b, data);
-	else if (is_stack(stack_b) && (*stack_b)->next->c_num == min)
+	else if (is_stack(stack_b) && (*stack_b)->next->order == min)
 		sb_pa_ra(stack_a, stack_b, data);
-	else if (is_stack(stack_b) && (*stack_b)->prev->c_num == min)
+	else if (is_stack(stack_b) && (*stack_b)->prev->order == min)
 		rrb_pa_ra(stack_a, stack_b, data);
-	else if (is_stack(stack_b) && (*stack_b)->prev->prev->c_num == min)
+	else if (is_stack(stack_b) && (*stack_b)->prev->prev->order == min)
 		rrb_rrb_pa_ra(stack_a, stack_b, data);
-	else if (is_stack(stack_b) && (*stack_b)->prev->prev->prev->c_num == min)
+	else if (is_stack(stack_b) && (*stack_b)->prev->prev->prev->order == min)
 		rrb_rrb_rrb_pa_ra(stack_a, stack_b, data);
 	else
 		return (false);
@@ -80,7 +79,7 @@ bool	pa_more_pivot(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 	{
 		while (push_min_ifpossible(stack_a, stack_b, data))
 			ret = true;
-		if (is_stack(stack_b) && (*stack_b)->c_num > pivot)
+		if (is_stack(stack_b) && (*stack_b)->order > pivot)
 		{
 			(*stack_b)->status += pivot;
 			command(PA, stack_a, stack_b, data);

@@ -13,9 +13,10 @@ SRCS	=	main.c \
 			quick_sort.c \
 			sort_less_five.c \
 			command.c \
+			put_command.c \
 			cmd_list.c \
 			optimize_cmdlist.c \
-			list_utils.c \
+			list_clear.c \
 			cmd_utils.c \
 			cmd_utils2.c \
 			duplicates_error.c \
