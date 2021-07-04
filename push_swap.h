@@ -93,9 +93,8 @@ void		rotate(t_dclist **stack);
 void		reverse_rotate(t_dclist **stack);
 
 // put_command.c
-void	put_command(int command);
-void	put_cmd_list(t_tdata *data);
-
+void		put_command(int command);
+void		put_cmd_list(t_tdata *data);
 
 // cmd_utils.c
 void		pa_ra(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data);
