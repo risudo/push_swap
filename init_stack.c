@@ -5,25 +5,20 @@ bool	init_stack_a(t_dclist **stack_a, t_data *data_a, int argc, char **argv)
 	int			i;
 	t_dclist	*tmp;
 	int			*p_value;
-	bool		ret;
 
 	i = 1;
-	ret = true;
 	while (i < argc)
 	{
 		p_value = ft_atoi(argv[i]);
 		if (!p_value)
-		{
-			ret = false;
-			break ;
-		}
+			return (false);
 		tmp = ft_lstnew(*p_value);
 		ft_lstadd_back(stack_a, tmp);
 		i++;
 	}
 	push_data(stack_a, data_a);
 	numbering_list(stack_a, data_a);
-	return (ret);
+	return (true);
 }
 
 void	ft_lstadd_back(t_dclist **list, t_dclist *new)
