@@ -13,6 +13,8 @@ bool	init_stack_a(t_dclist **stack_a, t_data *data_a, int argc, char **argv)
 		if (!p_value)
 			return (false);
 		tmp = ft_lstnew(*p_value);
+		if (!tmp)
+			return (false);
 		ft_lstadd_back(stack_a, tmp);
 		i++;
 	}
@@ -53,7 +55,7 @@ t_dclist	*ft_lstnew(int value)
 
 	new = (t_dclist *)malloc(sizeof(t_dclist));
 	if (!new)
-		put_error();
+		return (NULL);
 	new->value = value;
 	new->status = 0;
 	new->order = 1;

@@ -1,22 +1,5 @@
 #include "push_swap.h"
 
-void	ft_lstadd_front(t_dclist **list, t_dclist *new)
-{
-	t_dclist	*p;
-
-	if (!*list)
-	{
-		*list = new;
-		return ;
-	}
-	p = ft_lstlast(*list);
-	new->next = *list;
-	(*list)->prev = new;
-	p->next = new;
-	new->prev = p;
-	*list = new;
-}
-
 void	put_error(void)
 {
 	write(2, "Error\n", 6);
@@ -47,6 +30,8 @@ int	main(int argc, char **argv)
 	t_data		data_b;
 	t_tdata		stack_data;
 
+	if (argc == 1)
+		return (0);
 	stack_data.data_a = &data_a;
 	stack_data.data_b = &data_b;
 	if (!init_stack_a(&stack_a, stack_data.data_a, argc, argv))
@@ -55,7 +40,7 @@ int	main(int argc, char **argv)
 		put_error();
 	}
 	push_swap(&stack_a, &stack_b, &stack_data);
-	duplicates_error(&stack_a, stack_data.data_a);
+	duplicates_error(&stack_a, &stack_b, &stack_data);
 	optimize_cmdlist(&stack_data);
 	put_cmd_list(&stack_data);
 	stackclear(&stack_a, &stack_b, &stack_data);

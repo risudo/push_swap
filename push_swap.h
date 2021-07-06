@@ -157,7 +157,8 @@ void		find_sa_ra_pb(t_list *cmd_list);
 void		stackclear(t_dclist **stack_a,
 				t_dclist **stack_b, t_tdata *data);
 void		cmd_clear(t_list *cmd_list);
-void		duplicates_error(t_dclist **stack_a, t_data *data_a);
+void		duplicates_error(t_dclist **stack_a,
+				t_dclist **stack_b, t_tdata *data);
 
 // debug.c
 void		put_stack(t_dclist *stack_a, t_dclist *stack_b);

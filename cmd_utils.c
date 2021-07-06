@@ -28,10 +28,19 @@ void	sb_pa_ra(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 	command(RA, stack_a, stack_b, data);
 }
 
-void	rrb_pa_ra(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
+void	ft_lstadd_front(t_dclist **list, t_dclist *new)
 {
-	command(RRB, stack_a, stack_b, data);
-	command(PA, stack_a, stack_b, data);
-	(*stack_a)->status = SORTED;
-	command(RA, stack_a, stack_b, data);
+	t_dclist	*p;
+
+	if (!*list)
+	{
+		*list = new;
+		return ;
+	}
+	p = ft_lstlast(*list);
+	new->next = *list;
+	(*list)->prev = new;
+	p->next = new;
+	new->prev = p;
+	*list = new;
 }
