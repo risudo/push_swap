@@ -6,6 +6,7 @@ void	stackclear(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 	int			i;
 
 	i = 0;
+	push_both_data(stack_a, stack_b, data);
 	while (is_stack(stack_a) && i < data->data_a->len)
 	{
 		tmp = *stack_a;

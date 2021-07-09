@@ -4,7 +4,7 @@ void	quick_sort(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 {
 	if (is_sorted(stack_a, stack_b, data->data_a))
 		return ;
-	while (data->data_b->min_c_num == (*stack_a)->prev->order + 1)
+	while (data->data_b->min_order == (*stack_a)->prev->order + 1)
 		pa_more_pivot(stack_a, stack_b, data);
 	pb_same_status(stack_a, stack_b, data);
 	push_both_data(stack_a, stack_b, data);
@@ -58,7 +58,7 @@ void	pb_same_status(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 bool	is_large_num(t_dclist **stack_b, t_data *data_b, int pivot)
 {
 	push_data(stack_b, data_b);
-	if (data_b->max_c_num > pivot)
+	if (data_b->max_order > pivot)
 		return (true);
 	else
 		return (false);

@@ -61,6 +61,6 @@ int	get_pivot(t_dclist **stack, t_data *data)
 	if ((*stack)->prev->status == SORTED)
 		min = (*stack)->prev->order + 1;
 	else
-		min = data->min_c_num;
-	return ((data->max_c_num + min) / 2);
+		min = data->min_order;
+	return ((data->max_order + min) / 2);
 }

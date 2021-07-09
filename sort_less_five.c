@@ -2,23 +2,23 @@
 
 void	sort_three_arg(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 {
-	if ((*stack_a)->next->next->order == data->data_a->max_c_num
-		&& (*stack_a)->next->order == data->data_a->min_c_num)
+	if ((*stack_a)->next->next->order == data->data_a->max_order
+		&& (*stack_a)->next->order == data->data_a->min_order)
 		command(SA, stack_a, stack_b, data);
-	else if ((*stack_a)->order == data->data_a->max_c_num
-		&& (*stack_a)->next->order == data->data_a->min_c_num)
+	else if ((*stack_a)->order == data->data_a->max_order
+		&& (*stack_a)->next->order == data->data_a->min_order)
 		command(RA, stack_a, stack_b, data);
-	else if ((*stack_a)->next->next->order == data->data_a->min_c_num
-		&& (*stack_a)->next->order == data->data_a->max_c_num)
+	else if ((*stack_a)->next->next->order == data->data_a->min_order
+		&& (*stack_a)->next->order == data->data_a->max_order)
 		command(RRA, stack_a, stack_b, data);
-	else if ((*stack_a)->order == data->data_a->min_c_num
-		&& (*stack_a)->next->order == data->data_a->max_c_num)
+	else if ((*stack_a)->order == data->data_a->min_order
+		&& (*stack_a)->next->order == data->data_a->max_order)
 	{
 		command(SA, stack_a, stack_b, data);
 		command(RA, stack_a, stack_b, data);
 	}
-	else if ((*stack_a)->order == data->data_a->max_c_num
-		&& (*stack_a)->next->next->order == data->data_a->min_c_num)
+	else if ((*stack_a)->order == data->data_a->max_order
+		&& (*stack_a)->next->next->order == data->data_a->min_order)
 	{
 		command(SA, stack_a, stack_b, data);
 		command(RRA, stack_a, stack_b, data);
@@ -35,7 +35,7 @@ void	recursive_pb(t_dclist **stack_a, t_dclist **stack_b, t_tdata *data)
 		cmd = RA;
 	else if (data->data_a->min_place == LATTER)
 		cmd = RRA;
-	while ((*stack_a)->order != data->data_a->min_c_num)
+	while ((*stack_a)->order != data->data_a->min_order)
 		command(cmd, stack_a, stack_b, data);
 	(*stack_a)->status++;
 	command(PB, stack_a, stack_b, data);

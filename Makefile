@@ -20,7 +20,8 @@ SRCS	=	main.c \
 			cmd_utils.c \
 			cmd_utils2.c \
 			duplicates_error.c \
-#			debug.c
+			# leak_check.c \
+			# debug.c
 
 OBJS	=	${SRCS:.c=.o}
 

@@ -5,6 +5,9 @@
 # include <unistd.h>
 # include <limits.h>
 # include <stdbool.h>
+// #include "leak_check.h"
+// #define malloc ft_malloc
+// #define free ft_free
 # define FORMER 0
 # define LATTER 1
 # define SORTED -1
@@ -32,8 +35,8 @@ typedef struct s_data
 	int	len;
 	int	min_place;
 	int	sorted_len;
-	int	max_c_num;
-	int	min_c_num;
+	int	max_order;
+	int	min_order;
 	int	min_notsort;
 }	t_data;
 
