@@ -47,7 +47,7 @@ pa
 
 # How efficient is it?
 Use `test.sh` to test.  
-COUNT means the number of arguments.
+`COUNT` means the number of arguments.
 ```
 $ bash test.sh
 ```
